@@ -15,16 +15,7 @@ RUN apt-get install -y \
     make \
     ruby \
     ruby-pygments \
-   # ttf-liberation \
     unzip
-#RUN apt-get install -y font-bakoma-ttf
-
-#RUN apt-get install -y  \
-#    build-base \
-#    libxml2-dev \
-#    python2-dev \
-#    py2-pip \
-#    ruby-dev
 RUN gem install --no-document asciidoctor --version "${asciidoctor_version}" \
   && gem install --no-document asciidoctor-pdf --version 1.5.0.alpha.16 \
   && gem install --no-document asciidoctor-revealjs --version 1.1.1 \
