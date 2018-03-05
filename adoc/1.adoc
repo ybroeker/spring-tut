@@ -13,7 +13,8 @@ Für uns reicht es, dass vorbereitete Repo zu klonen:
 
 [source, console]
 ----
-git clone TODO
+TODO
+git clone https://github.com/ybroeker/spring-example.git
 ----
 
 Wie das hier generierte Projekt im Detail aussieht, sehen wir uns im nächsten Schritt an.
