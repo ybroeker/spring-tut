@@ -1,0 +1,12 @@
+[submodule "javasrc/1"]
+	path = javasrc/1
+	url = https://github.com/ybroeker/spring-example.git
+[submodule "javasrc/2"]
+	path = javasrc/2
+	url = https://github.com/ybroeker/spring-example.git
+[submodule "javasrc/3"]
+	path = javasrc/3
+	url = https://github.com/ybroeker/spring-example.git
+[submodule "javasrc/4"]
+	path = javasrc/4
+	url = https://github.com/ybroeker/spring-example.git
