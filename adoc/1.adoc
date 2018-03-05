@@ -30,7 +30,7 @@ Erstere lassen sich mit `test` starten, letztere mit `integration-test`.
 
 ==== Testabdeckung
 
-Für die Testabdeckung ist Jacacoc konfiguriert, dieses misst die Abdeckung durch Unit- und Integration-Tests.
+Für die Testabdeckung ist Jacoco konfiguriert, dieses misst die Abdeckung durch Unit- und Integration-Tests.
 
 ==== Checkstyle & PMD
 
