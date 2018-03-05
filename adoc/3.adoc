@@ -1,0 +1,131 @@
+== Domänenmodell erstellen
+:experimental:
+:icons: font
+:imagesdir: img
+:source-highlighter: highlightjs
+
+=== Domäne
+
+Entwickelt werden soll ein einfacher Blog, welcher Autoren das Anlegen von neuen Artikeln und Lesern das Kommentieren von diesen erlauben soll.
+
+Anhand der kurzen Beschreibung kann man auch schon direkt einzelne konzeptuelle Klassen TODO erkennen:
+
+* Nutzer
+* Artikel
+* Kommentare
+
+
+Nutzer haben erstmal nur Namen:
+
+* Nutzername
+* Vorname
+* Nachname
+
+Artikel sind jeweils von einem Nutzer erstellt und haben einen Text, einen Titel und einen Veröffentlichungs-Zeitpunkt.
+Außerdem gehören zu ihnen jeweils Kommentare.
+
+* Nutzer - als Assoziation
+* Kommentar - auch als Assoziation
+* Überschrift
+* Text
+* Zeitpunkt
+
+Und Kommentare gehören jeweils zu einem Artikel und besitzen einen Text und einen Erstell-Zeitpunkt.
+
+* Text
+* Zeitpunkt
+
+[plantuml, diagram-classes, svg]
+--
+class Nutzer {
+  Nutzername
+  Vorname
+  Nachname
+}
+class Artikel {
+  Überschrift
+  Text
+  Zeitpunkt
+}
+class Kommentare {
+  Text
+  Zeitpunkt
+}
+
+Artikel "1" *-- "n" Kommentare : enthält
+Artikel "n" --> "1" Nutzer : geschrieben von
+--
+
+=== Klassen
+
+Die grad entwickelten Klassen können nun implementiert werden. Dazu legen wir ein neues Package an, `domain`, und erstellen darin die Klassen:
+
+[source,java]
+.User.java
+----
+include::../javasrc/2/src/main/java/tdpe/example/domain/User.java[tags=class]
+}
+----
+
+[source,java]
+.Article.java
+----
+include::../javasrc/2/src/main/java/tdpe/example/domain/Article.java[tags=class]
+}
+----
+
+<1> Die Liste initialisieren wir direkt - so verhindern wir NullPointer.
+Außerdem übergeben wir diese nicht dem Kostruktor - ein neuer Artikel hat noch keine Kommentare.
+
+<2> Den Veröffentlichungs-Zeitpunk setzten wir direkt im Konstruktor, anstatt ihn zu übergeben.
+
+[source,java]
+.Comment.java
+----
+include::../javasrc/2/src/main/java/tdpe/example/domain/Comment.java[tags=class]
+}
+----
+
+<1> Auch hier setzen wir den Erstell-Zeitpunk direkt im Konstruktor, anstatt ihn zu übergeben.
+
+
+[IMPORTANT]
+====
+Getter sind jeweils der Übersichtlichkeit halber weggelassen. Weitere Methoden enthalten die Klassen noch nicht.
+====
+
+Uns fehlt noch die Möglichkeit, Artikeln neue Kommentare hinzuzufügen.
+Dafür fügen wir eine weitere Methode hinzu:
+
+[source,java]
+.Article.java
+----
+include::../javasrc/2/src/main/java/tdpe/example/domain/Article.java[tags=add-comment]
+----
+
+=== Testen
+
+Um unser Domain-Model auszuprobieren, schreiben wir ein paar kurze Unit-Tests:
+
+[source,java]
+.UserTest.java
+----
+include::../javasrc/2/src/test/java/tdpe/example/domain/UserTest.java[tags=test]
+----
+
+[source,java]
+.ArticleTest.java
+----
+include::../javasrc/2/src/test/java/tdpe/example/domain/ArticleTest.java[tags=test]
+----
+
+Die beiden Test können wir mir `./mvnw clean test` ausfürhren lassen.
+
+Die Ausgabe sollte dann einen erfolgreichen Durchlauf anzeigen:
+
+[source,console]
+----
+Results :
+
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0
+----

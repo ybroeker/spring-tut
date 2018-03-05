@@ -1,0 +1,114 @@
+== Erzeugen des Projekts
+:experimental:
+:icons: font
+:imagesdir: img
+:source-highlighter: highlightjs
+
+Das Erzeugen eins Projekts nehmen wir euch an dieser Stelle ab.
+Wer nachlesen möchte, wie man ein einfaches Spring Boot Projekt mit Thymeleaf aufsetzen kann, findet
+https://spring.io/guides/gs/serving-web-content[hier^] weitere Informationen.
+Außerdem gibt es den https://start.spring.io/[SPRING INITIALIZR^], mit dem sichvorkonfigurierte Projekte erstellen lassen.
+
+Für uns reicht es, dass vorbereitete Repo zu klonen:
+
+[source, console]
+----
+git clone TODO
+----
+
+Wie das hier generierte Projekt im Detail aussieht, sehen wir uns im nächsten Schritt an.
+
+=== Konfiguration
+
+Das Projekt enthält einige nützliche vorkonfigurierte Plugins und Konfigurationen.
+
+==== Tests
+
+Das Projekt enthält Konfigurationen für getrennte Durchläufe von Unit- und Integration-Tests.
+Erstere lassen sich mit `test` starten, letztere mit `integration-test`.
+
+==== Testabdeckung
+
+Für die Testabdeckung ist Jacacoc konfiguriert, dieses misst die Abdeckung durch Unit- und Integration-Tests.
+
+==== Checkstyle & PMD
+
+Checkstyle und PMD sind passend vorkonfiguriert.
+
+Wer Anpassungen vornehmen möchte, findet die Konfigurationen unter `codecheck/`.
+
+==== .editorconfig
+
+Dem Projekt liegt eine .editorconfig bei, diese sorgt für konstistente Grundeinstellungen der IDE.
+Dies berifft z.B. Encoding (UTF-8), Line-Endings (LF), Einrückung und weiteres.
+
+==== .gitignore
+
+Die .gitignore ist für Java und die üblichen IDEs vorkonfiguriert.
+
+
+
+=== Bauen und Testen
+
+Das Projekt lässt sich bereits bauen und auch testen.
+
+Mit
+
+[source, console]
+----
+./mvnw clean verify
+----
+
+führt man dabei den gesamten Build aus, welcher zB das Überprüfen des Code-Stils, Tests und das Packen der jar enthält.
+
+Führen wir dies aus, sollte der Build korrekt durchlaufen.
+
+[NOTE]
+====
+Statt direkt Maven nutzen wir den Maven-Wrapper.
+Diesen ruft man im Project-Verzeichnis unter Linux mit `./mvnw` statt `mvn` auf und unter Windows mit TODO.
+Der Maven-Wrapper kümmert sich um die korrekte Maven-Version und Installation für dieses Projekt.
+====
+
+
+=== Starten
+
+Wenn wir das Projekt nur starten wollen, ohne den gesamten Build durchzuführen, bietet Spring ein zusätzliches Maven-Goal:
+
+[source, console]
+----
+./mvnw spring-boot:run
+----
+
+
+Die Ausgabe auf der Konsole sollte, nach den üblichen Meldungen die Anzeigen das Maven das Projekt baut, in etwa so aussehen (dieses Beispiel ist etwas gekürzt):
+
+[source, console]
+----
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::            (v2.0.0.RC2)
+
+2018-02-27 16:20:18.887  INFO 35703 --- [  restartedMain] tdpe.example.ExampleApplication          : Starting ExampleApplication on YBMacBook.local with PID 35703 (.../example/target/classes started by ybroeker in .../example)
+2018-02-27 16:20:18.892  INFO 35703 --- [  restartedMain] tdpe.example.ExampleApplication          : No active profile set, falling back to default profiles: default
+2018-02-27 16:20:22.382  INFO 35703 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2018-02-27 16:20:22.464  INFO 35703 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2018-02-27 16:20:22.465  INFO 35703 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.28
+2018-02-27 16:20:22.721  INFO 35703 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2018-02-27 16:20:22.721  INFO 35703 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3635 ms
+2018-02-27 16:20:23.060  INFO 35703 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2018-02-27 16:20:23.804  INFO 35703 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6300c15e: startup date [Tue Feb 27 16:20:19 CET 2018]; root of context hierarchy
+2018-02-27 16:20:24.012  INFO 35703 --- [  restartedMain] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2018-02-27 16:20:25.108  INFO 35703 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path '' # <1>
+2018-02-27 16:20:25.126  INFO 35703 --- [  restartedMain] tdpe.example.ExampleApplication          : Started ExampleApplication in 7.137 seconds (JVM running for 8.233)
+----
+
+<1> Hier sieht man das die Anwendung automatisch einen Tomcat gestartet und auf http://localhost:8080 erreichbar ist.
+
+Ruft man die Webapplikation nun im Browser auf, sollte sich in etwa folgendes Bild zeigen:
+
+image::step1-webapp.png[WebApp]

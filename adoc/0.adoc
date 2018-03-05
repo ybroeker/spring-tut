@@ -1,0 +1,41 @@
+== Einleitung
+
+Ziel dieses Tutorials ist es, Entwicklern mit wenig oder gar keiner Erfahrung in der Entwicklung von
+Webanwendungen einen ersten Einblick in die Entwicklung mit Spring zu verschaffen.
+
+Hierfür wird auf Basis von Spring Boot ein Projekt aufgesetzt, das im Laufe
+einiger Schritte zu einem Funktionsfähigen (wenn auch rudimentären) Blog entwickelt wird.
+
+=== Technologie
+
+Folgende Werkzeuge, Frameworks und sonstige Technologien sind dazu eingeplant
+
+.verwendete Technologien
+|===
+| |Verwendung |Alternativen
+
+|http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 10^]
+|
+|
+
+
+|http://maven.apache.org/[Maven^] (mit https://github.com/takari/maven-wrapper[Maven Wrapper^])
+|Build-Tool
+|https://gradle.org/[Gradle]
+
+|http://spring.io/[Spring^]
+|Framework für Dependency-Injection, hier in Form von https://projects.spring.io/spring-boot/[Spring Boot^]
+|Hier alternativlos!
+
+|http://www.h2database.com/[H2^]
+|(Embedded)-Datenbank
+| http://db.apache.org/derby/[Derby^],
+http://sqlite.org/[SQLite] (z.B. mit https://bitbucket.org/xerial/sqlite-jdbc[Xerial^])
+
+|http://www.thymeleaf.org/[Thymeleaf^]
+|Template-Sprache
+|http://www.oracle.com/technetwork/java/javaee/jsp/index.html[JSP^],
+https://velocity.apache.org/[Velocity^],
+http://freemarker.org/[Freemarker^]
+
+|===

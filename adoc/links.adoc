@@ -1,0 +1,44 @@
+== interessante Links und weitere Literatur
+
+|===
+
+|http://spring.io/guides[^] |Offizielle Spring Tutorials |
+
+|http://getbootstrap.com/css/[^]
+|Übersicht über die CSS-Klassen in Bootstrap
+|
+
+|https://github.com/spring-projects/spring-boot/tree/master/spring-boot-starters
+|Liste der spring-boot-starter Artefakte
+|
+
+|http://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
+|Spring-Data-JPA Query-Methods
+|
+
+|http://www.mehdi-khalili.com/orm-anti-patterns-series/
+|ORM Anti-Patterns
+|
+
+|http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api
+|Best-Practices für Rest-APIs
+|Bezieht sich zwar hauptsächlich auf REST und nicht HTML,
+die meisten Punkt gelten aber auch für HTML.
+
+
+
+|https://code.google.com/p/guava-libraries/
+|Eine Bibliothek mit diversen Hilfsmethoden z.B. zum komfortableren Umgang mit Collections in Java
+|Mit Java 9 und 10 zT obsolet
+
+|http://www.webjars.org/
+|Übersicht über die via Webjars als Maven-Artefakte verfügbaren Frontend-Bibliotheken
+|
+
+|http://portswigger.net/burp/proxy.html[Burp Proxy^]
+|Tool zum analysieren und verändern von HTTP-Requests.
+|Für einfache Projekte eher selten Wertvoll. Aber wenn, dann unentbehrlich :)
+Die vollversion kostet Geld, aber auch die "eingeschränkte" Fassung ist im Allgemeinen vollkommen
+ausreichend.
+
+|===

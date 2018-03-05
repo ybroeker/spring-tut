@@ -1,0 +1,138 @@
+== Artikel anzeigen
+
+Bisher macht die Anwendung noch nichts - es wäre aber schön, schon mal zu sehen, wie sich Artikel anzeigen lassen.
+
+=== Controller
+
+Um auf HTTP-Requests zu reagieren brauchen wir einen weiteren Controller. Dieser soll den Blog anzeigen -
+wir nennen ihn also `BlogController`. Die Klasse dazu erstellen wir ein einem weiteren Package: `web`.
+
+Dieser soll bei Anfragen auf die Hauptseite reagieren und eine Seite mit Artikeln anzeigen:
+
+
+[source,java]
+.BlogController.java
+----
+include::../javasrc/3/src/main/java/tdpe/example/web/BlogController.java[tags=class]
+----
+
+<1> Damit die Klasse als Controller erkannt wird, muss sie mit `@Controller` annotiert werden
+<2> Außerdem muss das RequestMapping angegeben werden - die BlogPosts sollen beim Aufrufen von `/` angezeigt werden
+<3> Es wird wieder ein ModelAndView erstellt - als View übergeben wir `blog`, welche wir gleich noch erstellen müssen
+<4> Es sollen mehrere Artikel angezeigt werden, wir erstellen also eine Liste und fügen dieser mehrere neue Artikel hinzu
+<5> Die Liste von Artikeln übergeben wir dann noch dem ModelAndView
+
+=== View
+
+Die View erstellen wir als HTML-Datei im template-Ordner.
+
+[source, html]
+.welcome.html
+----
+include::../javasrc/3/src/main/resources/templates/blog.html[]
+----
+
+<1> `th:each` - wieder ein Thymeleaf-Attribut - funktioniert ähnlich wie ein foreach-Loop.
+Mit der Dollar-Notation greift man wieder auf eine bestehende Variable zu, hier `articles` aus dem Model,
+und mit `article` deklariert man eine neue Variable, welche der Reihe nach alle Werte aus `articles` enthält.
+Das `th:each`-enthaltende HTML-Element wird dabei inklusive Inhalt für jeden Wert erneut ausgegeben.
+
+<2> Mit `th:text` geben wir wieder den Text des Elements an. Wir greifen dazu auf den eben deklarierten `article` zu und fragen von diesem den `title` ab.
+Im Hintergrund wird dabei der Getter `getTitle()` aufgerufen.
+
+=== Testen
+
+Den eben erstellten BlogController können wir jetzt noch mit Tests abdecken.
+Dabei können wir zwei Arten von Tests erstellen:
+
+* Unit-Tests: einfache Unit-Tests, die ihn `src/test` zu finden sind
+* Integration-Tests: Tests, die die Integration der Anwendung, also das Zusammenspiel aller Teile und des Frameworks, testen. Diese sind in `src/it` zu finden
+
+==== Unit-Test
+
+Der Unit-Test testet erstmal nur, ob der Controller auch die passende View zurück gibt und das Model Artikel enthält.
+
+[source, java]
+.BlogControllerTest.java
+----
+include::../javasrc/3/src/test/java/tdpe/example/web/BlogControllerTest.java[tags=test]
+----
+<1> Hierbei müssen wir den Namen der View überprüfen, nicht direkt die View.
+
+==== Integration-Test
+
+Der Integration-Test testet, ob die Applikation immer noch startbar ist und der Controller auch bei wirklichen Anfragen passend reagiert.
+
+[IMPORTANT]
+====
+Integration-Tests liegen nicht in `src/test`, sondern in `src/it` und enden nicht wie üblich auf `Test`, sondern auf `IT`.
+Dies ist nötig, damit bei der Ausführung der Tests zwischen beiden Arten unterschieden werden kann.
+====
+
+
+[source, java]
+.BlogControllerIT.java
+----
+include::../javasrc/3/src/it/java/tdpe/example/web/BlogControllerIT.java[tags=test]
+----
+<1> Wir müssen dem Test-Framework bekannt machen, dass dies ein Spring-Integration-Test ist
+<2> Außerdem müssen wir Spring sagen, dass dies ein SpringBootTest ist, damit die Anwendung intern gestartet wird
+<3> Testen wollen wir die MVC-Componente von Spring - dies müssen wir angeben, damit Spring die passenden Klassen bereit stellt
+<4> MockMVC ist eine spezielle Klasse, mit der man die MVC-Componente (= **M**odel **V**iew **C**ontroller testen kann).
+Mit `@Autowired` fordern wir ein Objekt dieser Klasse bei Spring an - weiteres dazu kommt später noch
+<5> Mit der MockMVC-Instanz können wir jetzt Requests ausführen. In diesem Fall ein GET auf `/`, das gleiche, was ein Browser beim Aufrufen der Seite machen würde.
+<6> Wir erwarten, dass der Status (=das Ergebnis in Form eines https://de.wikipedia.org/wiki/HTTP-Statuscode[Codes]) der Anfrage OK ist
+<7> außerdem soll das Ergebniss vom Typ HTML sein
+<8> und der Seiten-Text soll die Titel der beiden im Controller erstellten Artikel enthalten
+
+
+==== Ausführen der Tests
+
+Wenn wir nur die Unit-Tests ausführen wollen, können wir dies wieder mit `./mvnw clean test` machen.
+
+In der Ausgabe sollte der erstellte Test als erfolgreich durchgelaufen auftauchen
+[source, console]
+----
+Running BlogControllerTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.187 sec - in BlogControllerTest
+----
+
+
+Die Integration-Tests können wir mit `./mvnw clean verify` ausführen, dabei werden sowohl Unit als auch Integration-Tests durchgeführt.
+
+Bei der Ausführung sehen wir, dass die Tests fehlschlagen.
+
+Der Grund dafür findet sich im StackTrace:
+
+[source, console]
+----
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'welcomeController' method
+public org.springframework.web.servlet.ModelAndView WelcomeController.welcome()
+to {[/]}: There is already 'blogController' bean method
+----
+
+In dem Projekt existiert noch der ursprüngliche WelcomeController, welcher auch ein RequestMapping für `/` bereitstellt.
+Zwei gleiche Mappings sind nicht möglich - am einfachsten können wir dies lösen, indem wir den alten, nicht mehr gebrauchten Controller und die View löschen.
+
+Danach laufen auch die Integration-Tests erfolgreich durch:
+
+[source, console]
+----
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0
+----
+
+=== Starten
+
+Zusätzlich zu den Tests können wir uns jetzt auch die Ausgabe im Browser angucken.
+
+Dazu können wir die Applikation starten:
+[source, console]
+----
+./mvnw spring-boot:run
+----
+
+und die Seite dann mit http://localhost:8080 aufrufen.
+
+[.thumb]
+image::blog.png[Blog]
+
