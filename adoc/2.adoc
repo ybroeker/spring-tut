@@ -33,7 +33,7 @@ Sie bieten den Startpunkt, von dem aus Aktionen des Benutzers verarbeitet werden
 Die Methode gibt ein ModelAndView zurück, die für die Antwort an den Browser dargestellt werden soll.
 ModelAndView enthält den Namen einer View und die dazugehörigen Daten.
 Die View ist in diesem Fall ein Template, genauer das Template `welcome`, was aufgelöst wird src/main/resources/templates/welcome.html.
-Das Model ist besteht aus mehreren Objekten, die in der View über ihren Namen referenzierbar sind.
+Das Model besteht dabei aus mehreren Objekten, die in der View über ihren Namen referenzierbar sind.
 
 <3> Mit dieser Annotation wird Spring angewiesen,
 diese Variable mit einem Wert aus der Datei application.properties` vorzubelegen, der unter dem Schlüssel `application.message zu finden ist.
