@@ -32,7 +32,7 @@ Sie bieten den Startpunkt, von dem aus Aktionen des Benutzers verarbeitet werden
 <2> Das @RequestMapping("/")` deutet an, dass diese Methode aufgerufen werden soll wenn eine HTTP-Anfrage auf den Pfad `"/"` stattfindet.
 Die Methode gibt ein ModelAndView zurück, die für die Antwort an den Browser dargestellt werden soll.
 ModelAndView enthält den Namen einer View und die dazugehörigen Daten.
-Die View ist in diesem Fall ein Template, genauer das Template `welcome`, was aufgelöst wird src/main/resources/templates/welcome.html.
+Der Name der View, hier `welcome`, wird aufgelöst zu einem Html-Template, src/main/resources/templates/welcome.html.
 Das Model besteht dabei aus mehreren Objekten, die in der View über ihren Namen referenzierbar sind.
 
 <3> Mit dieser Annotation wird Spring angewiesen,
