@@ -14,7 +14,7 @@ Folgende Werkzeuge, Frameworks und sonstige Technologien sind dazu eingeplant
 |===
 | |Verwendung |Alternativen
 
-|http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 10^]
+|http://www.oracle.com/technetwork/java/javase/downloads/index.html[Java 9^]
 |
 |
 
