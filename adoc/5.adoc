@@ -10,12 +10,9 @@ Der Controller braucht also einen Service, der die Artikel bereitstellt.
 Dazu definieren wir als erstes ein passendes Interface:
 
 [source,java]
-.ArticleService.java
+.BlogService.java
 ----
-TODO:
-public interface BlogService {
-    List<Article> getArticles();
-}
+include::../javasrc/5/src/main/java/tdpe/example/domain/BlogService.java[tags=class]
 ----
 
 Der Service bekommt erstmal nur eine einzelne Methode - zum Laden aller Artikel.
@@ -28,26 +25,7 @@ Diesen benutzen wir dann im Controller, anstatt dort die Artikel neu zu erstelle
 [source,java]
 .BlogController.java
 ----
-TODO:
-class BlogController {
-
-    private BlogService blogService;
-
-    @Autowired //<1>
-    public BlogController(BlogService blogService) {
-        this.blogService=blogService;
-    }
-
-    @RequestMapping("/")
-    public ModelAndView showBlog() {
-        var modelAndView = new ModelAndView("blog");
-
-        var articles = blogService.getArticles(); //<2>
-        modelAndView.addObject("articles", articles);
-
-        return modelAndView;
-    }
-}
+include::../javasrc/5/src/main/java/tdpe/example/web/BlogController.java[tags=class]
 ----
 
 <1> Hier benutzen wir wieder `@Autowired` -
