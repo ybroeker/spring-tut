@@ -1,3 +1,24 @@
 == Datenbank
 
-TODO Spring-Data-JPA
+Die Daten sollten natürlich nicht fest im Service erstellt werden.
+Stattdessen wäre es sinnvoll, wenn sie aus einer Datenbank geladen werden.
+
+Dazu bietet Spring eine einfache Integration an,
+die einen Großteil der Arbeit beim Anbinden von Datenbanken abnimmt.
+
+=== Dependencies
+
+Hinzufügen müssen wir erstmal nur folgende Dependencies.
+Diese müssen dazu einfach in der `<dependecnies>`-Section der pom.xml eingefügt werden:
+
+[source,xml]
+.pom.xml
+----
+include::../javasrc/6/pom.xml[tags=db]
+----
+
+<1> Dies enthält die nötigen APIs zur Verwednung von Spring-Data-JPA und JPA allgemein
+
+<2> H2 ist eine einfache Embedded-Datenbank, die ohne weitere Einrichtung funktioniert.
+
+

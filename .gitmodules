@@ -18,3 +18,7 @@
 	path = javasrc/5
 	url = https://github.com/ybroeker/spring-example.git
 	branch = 5
+[submodule "javasrc/6"]
+	path = javasrc/6
+	url = https://github.com/ybroeker/spring-example.git
+	branch = 6
