@@ -34,7 +34,7 @@ wenn die Klasse instanziert wird.
 
 <2> Den _injizierten_ `BlogService` benutzen wir dann, um eine Liste der Artikel zu erhalten.
 
-=== Tests anpassen
+=== Unit-Test anpassen
 
 Durch die Änderung des Konstruktors von `BlogController` kompiliert der Tests nicht mehr,
 da wir in diesem den Default-Konstruktor benutzen.
@@ -57,3 +57,28 @@ Dieses annotieren wir mit `@Mock`, wodurch die Library angewiesen wird, einen Mo
 <2> Vor jedem Test weisen wir die Library dann an, alle mit `@Mock` annotierten Felder zu inititalisieren.
 
 <3> Im Test benutzen wir dann den initialisieren Mock.
+
+=== Service implementieren
+
+Wenn man auch die Integration-Tests ausführt oder das gesamte Programm startet, gibt es wieder eine Fehlermeldung:
+
+[source, console]
+----
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'tdpe.example.domain.BlogService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+----
+
+Der Grund dafür ist: im BlogController erwarten wir eine Implementation des `BlogService`, bisher gibt es aber nur das Interface.
+
+
+Wir erstellen dazu die Klasse `BlogServiceImpl` (_Impl_ für _Implementierung_).
+Diese liefert in `getArticles` erstmal eine einfache Liste von Artikeln:
+
+
+[source,java]
+.BlogServiceImpl.java
+----
+include::../javasrc/5/src/main/java/tdpe/example/domain/BlogServiceImpl.java[tags=class]
+----
+
+<1> Die Klasse ist annotiert mit `@Service` -
+damit erkennt Spring sie als Service und kann sie anderen Klassen bereitstellen, z.B. dem  `BlogController`
