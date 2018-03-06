@@ -60,7 +60,7 @@ Mit
 ./mvnw clean verify
 ----
 
-führt man dabei den gesamten Build aus, welcher zB das Überprüfen des Code-Stils, Tests und das Packen der jar enthält.
+führt man dabei den gesamten Build aus, welcher z.B. das Überprüfen des Code-Stils, Tests und das Packen der jar enthält.
 
 Führen wir dies aus, sollte der Build korrekt durchlaufen.
 
