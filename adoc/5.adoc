@@ -41,4 +41,19 @@ da wir in diesem den Default-Konstruktor benutzen.
 
 Wir müssen also auch im Test eine Instanz von `BlogService` übergeben.
 
-Anstatt dabei das Interface
+Dazu nutzen wir _Mocking_ - dabei erstellen wir keine echte Implementierung des Interfaces,
+sondern lassen durch eine Library eine Implementierung erstellen, deren Verhalten wir dann im Nachhinein steuern können.
+
+
+[source,java]
+.BlogControllerTest.java
+----
+include::../javasrc/5/src/test/java/tdpe/example/web/BlogControllerTest.java[tags=test]
+----
+
+<1> Wir legen eine Instanzvariable des benötigen Interfaces an.
+Dieses annotieren wir mit `@Mock`, wodurch die Library angewiesen wird, einen Mock dieses Interfaces bereitzustellen
+
+<2> Vor jedem Test weisen wir die Library dann an, alle mit `@Mock` annotierten Felder zu inititalisieren.
+
+<3> Im Test benutzen wir dann den initialisieren Mock.
