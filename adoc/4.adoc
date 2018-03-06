@@ -35,10 +35,11 @@ include::../javasrc/3/src/main/resources/templates/blog.html[]
 <1> `th:each` - wieder ein Thymeleaf-Attribut - funktioniert ähnlich wie ein foreach-Loop.
 Mit der Dollar-Notation greift man wieder auf eine bestehende Variable zu, hier `articles` aus dem Model,
 und mit `article` deklariert man eine neue Variable, welche der Reihe nach alle Werte aus `articles` enthält.
-Das `th:each`-enthaltende HTML-Element wird dabei inklusive Inhalt für jeden Wert erneut ausgegeben.
+Das `th:each`-enthaltende HTML-Element wird dabei inklusive Inhalt für jeden Wert erneut ausgegeben
 
-<2> Mit `th:text` geben wir wieder den Text des Elements an. Wir greifen dazu auf den eben deklarierten `article` zu und fragen von diesem den `title` ab.
-Im Hintergrund wird dabei der Getter `getTitle()` aufgerufen.
+<2> Mit `th:text` geben wir wieder den Text des Elements an.
+Wir greifen dazu auf den eben deklarierten `article` zu und fragen von diesem den `title` ab.
+Im Hintergrund wird dabei der Getter `getTitle()` aufgerufen
 
 === Testen
 
