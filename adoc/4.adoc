@@ -24,10 +24,10 @@ include::../javasrc/3/src/main/java/tdpe/example/web/BlogController.java[tags=cl
 
 === View
 
-Die View erstellen wir als HTML-Datei im template-Ordner.
+Die View erstellen wir als HTML-Datei (`blog.html`) im template-Ordner.
 
 [source, html]
-.welcome.html
+.blog.html
 ----
 include::../javasrc/3/src/main/resources/templates/blog.html[]
 ----
