@@ -41,7 +41,7 @@ Wer Anpassungen vornehmen möchte, findet die Konfigurationen unter `codecheck/`
 ==== .editorconfig
 
 Dem Projekt liegt eine .editorconfig bei, diese sorgt für konstistente Grundeinstellungen der IDE.
-Dies berifft z.B. Encoding (UTF-8), Line-Endings (LF), Einrückung und weiteres.
+Dies betrifft z.B. Encoding (UTF-8), Line-Endings (LF), Einrückung und weiteres.
 
 ==== .gitignore
 
