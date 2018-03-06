@@ -75,7 +75,7 @@ include::../javasrc/2/src/main/java/tdpe/example/domain/Article.java[tags=class]
 ----
 
 <1> Die Liste initialisieren wir direkt - so verhindern wir NullPointer.
-Außerdem übergeben wir diese nicht dem Kostruktor - ein neuer Artikel hat noch keine Kommentare.
+Außerdem übergeben wir diese nicht dem Konstruktor - ein neuer Artikel hat noch keine Kommentare.
 
 <2> Den Veröffentlichungs-Zeitpunk setzten wir direkt im Konstruktor, anstatt ihn zu übergeben.
 
