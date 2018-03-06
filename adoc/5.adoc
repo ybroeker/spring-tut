@@ -56,7 +56,7 @@ wenn die Klasse instanziert wird.
 
 <2> Den _injizierten_ `BlogService` benutzen wir dann, um eine Liste der Artikel zu erhalten.
 
-== Tests anpassen
+=== Tests anpassen
 
 Durch die Änderung des Konstruktors von `BlogController` kompiliert der Tests nicht mehr,
 da wir in diesem den Default-Konstruktor benutzen.
