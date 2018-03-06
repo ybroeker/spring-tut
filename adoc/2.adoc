@@ -28,18 +28,18 @@ include::../javasrc/1/src/main/java/tdpe/example/WelcomeController.java[tags=cla
 
 <1> Diese Klasse ist durch die Annotation ein Controller.
 Controller in einer Spring WebMVC-Anwendung nehmen HTTP-Anfragen entgegen, erzeugen ein geeignetes Model und benennen die zu verwendende View.
-Sie bieten den Startpunkt, von dem aus Aktionen des Benutzers verarbeitet werden.
+Sie bieten den Startpunkt, von dem aus Aktionen des Benutzers verarbeitet werden
 
-<2> Das @RequestMapping("/")` deutet an, dass diese Methode aufgerufen werden soll wenn eine HTTP-Anfrage auf den Pfad `"/"` stattfindet.
+<2> Das `@RequestMapping("/")` deutet an, dass diese Methode aufgerufen werden soll wenn eine HTTP-Anfrage auf den Pfad `"/"` stattfindet.
 Die Methode gibt ein ModelAndView zurück, die für die Antwort an den Browser dargestellt werden soll.
 ModelAndView enthält den Namen einer View und die dazugehörigen Daten.
 Der Name der View, hier `welcome`, wird aufgelöst zu einem Html-Template, src/main/resources/templates/welcome.html.
-Das Model besteht dabei aus mehreren Objekten, die in der View über ihren Namen referenzierbar sind.
+Das Model besteht dabei aus mehreren Objekten, die in der View über ihren Namen referenzierbar sind
 
 <3> Mit dieser Annotation wird Spring angewiesen,
-diese Variable mit einem Wert aus der Datei application.properties` vorzubelegen, der unter dem Schlüssel `application.message zu finden ist.
-Durch das hinzufügen von `":Hello World"` in der Annotation wird `"Hello World"` als Standardbelegung angenommen, falls der gesuchte Schlüssel in den application.properties nicht gefunden wurde.
-Würde die Standardbelegung im `@Value` weggelassen, gäbe es statt dessen beim Anwendungsstart eine Exception wenn die entsprechende Property fehlt.
+diese Variable mit einem Wert aus der Datei `application.properties` vorzubelegen, der unter dem Schlüssel `application.message` zu finden ist.
+Durch das hinzufügen von `":Hello World"` in der Annotation wird `"Hello World"` als Standardbelegung angenommen, falls der gesuchte Schlüssel in den `application.properties` nicht gefunden wurde.
+Würde die Standardbelegung im `@Value` weggelassen, gäbe es statt dessen beim Anwendungsstart eine Exception wenn die entsprechende Property fehlt
 
 
 === Konfigurationen
