@@ -82,3 +82,5 @@ include::../javasrc/5/src/main/java/tdpe/example/domain/BlogServiceImpl.java[tag
 
 <1> Die Klasse ist annotiert mit `@Service` -
 damit erkennt Spring sie als Service und kann sie anderen Klassen bereitstellen, z.B. dem  `BlogController`
+
+Wir können die Anwendung jetzt starten und sehen auf http://localhost:8080 die beiden im Service erstellten Artikel.
