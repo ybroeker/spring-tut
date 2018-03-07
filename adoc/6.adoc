@@ -117,7 +117,7 @@ Damit die Datenbank benutzt werden kann, müssen wir diese noch aktivieren:
 include::../javasrc/6/src/main/java/tdpe/example/ExampleApplication.java[tags=class]
 ----
 
-<1> Hiermit wird das erkennen von Repositorys aktiviert
+<1> Hiermit wird das Erkennen von Repositorys aktiviert
 
 <2> Hiermit wird die Unterstützung für Transaktionen aktiviert.
 Methoden können damit mit `@Transcational` annotiert werden,
@@ -152,4 +152,4 @@ include::../javasrc/6/src/main/resources/data.sql[tags=]
 
 === Starten
 
-Wir können die ANwendung wieder ausführen (`./mnvw spring-boot:run`)
+Wir können die Anwendung wieder ausführen (`./mnvw spring-boot:run`)
