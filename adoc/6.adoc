@@ -95,7 +95,7 @@ Die Interaktion mit der Datenbank findet über ein Repository statt.
 
 Für dieses muss nur ein Interface angelegt werden, Spring legt dann im Hintergrund eine entsprechende Implementation an und stellt diese bereit.
 
-Wir können dazu einfach das schon bestehede Interface `CrudRepository` erweitern:
+Wir können dazu einfach das von Spring bereitgestellte Interface `CrudRepository` erweitern:
 
 [source, java]
 .ArticleRepository.java
