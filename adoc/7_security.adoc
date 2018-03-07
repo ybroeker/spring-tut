@@ -1,0 +1,136 @@
+== Sicherheit und Login
+
+Damit neue Artikel veröffentlicht werden können, müssen sich Nutzer natürlich auch einloggen können.
+
+=== Spring Security
+
+Spring liefert bereits ein recht umfassendes Framework um Login, Sessionverwaltung, und so weiter umzusetzen: Spring Security.
+
+Wie bereits bei der Datenbankanbindung muss man nur in der pom.xml
+die passende Abhängigkeit angeben - in diesem Fall `spring-boot-starter-security`:
+
+[source,xml]
+.pom.xml
+----
+include::../javasrc/7/pom.xml[tags=security]
+----
+
+=== Nutzer anpassen
+
+Damit Spring die entsprechende Klasse als User erkennt, muss diese das Interface `UserDetails` implementieren.
+Dieses schreib u.a. ein Passwort sowie eine Liste von Rollen( zB User, Admin) vor.
+
+[source,java]
+.User.java
+----
+include::../javasrc/7/src/main/java/tdpe/example/domain/User.java[tags=class]
+----
+
+<1> Die Klasse muss `UserDetails` implementieren
+
+<2> User brauchen ein Passwort
+
+<3> Außerdem eine Liste von Rollen, diese können einfach als String
+(im Format `ROLE_USER`) gespeichert werden.
+Die Liste enthält nur einfache Datentypen, man kann sie deshlab mit
+`EementCollection` annotieren, damit sie passend in der Datenbank gespeichert werden
+
+<4> Den Konstruktor passen wir an, damit ihm auch das Passwort übergeben wird
+
+<5> Das Interface schreibt vor, dass `getAuthorities` eine Liste von `GrantedAuthority`
+zurückgibt - diese können wir einfach aus der Liste der Rollen erzeugen lassen
+
+<6> Außerdem gibt es einige weitere den Zustand des Nutzers betreffende Methode -
+diese können aber erstmal ignoriert werden und geben einfach `true` zurück
+
+Da wir den Nutzer geändert haben, müssen wir die Beispieldaten im sql-Skript entsprechend anpassen:
+
+[source, sql]
+.data.sql
+----
+include::../javasrc/7/src/main/resources/data.sql[tags=]
+----
+<1> Der Nutzer bekommt zusätzlich ein Passwort übergeben.
+Um zu verhinder, dass Passworter im Klartext in der Datenbank stehen, werden diese gehasht -
+in diesem Fall mit BCrypt. In diesem Fall ist das Passwort zu diesem Hash `password`,
+hashen kann man diese z.B. mit http://bcrypthashgenerator.apphb.com/[^]
+
+<2> Außerdem müssen wir dem Nutzer noch Rollen zuweisen, dieser Nutzer bekommt die Rolle `ROLE_USER`
+
+
+Außerdem wird in den Tests noch der alte Konstruktor von `User` benutzt,
+dort muss der Aufruf entsprechend angepasst werden -
+z.B., indem man obigen Hash als Passwort übergibt.
+
+
+=== Service
+
+Die Nutzer müssen natürlich noch aus der Datenbank geladen werden können.
+
+Wie bei den Artikeln brauchen wir dazu ein Repository und eine Service.
+
+[source,java]
+.UserRepository.java
+----
+include::../javasrc/7/src/main/java/tdpe/example/domain/UserRepository.java[tags=class]
+----
+
+
+[source,java]
+.UserService.java
+----
+include::../javasrc/7/src/main/java/tdpe/example/domain/UserService.java[tags=class]
+----
+<1> UserDetailsService ist ein Interface von Spring, welches vom Framework zum Laden der Nutzers benutzt wird, diese erweitert unser UserService
+
+[source,java]
+.UserServiceImpl.java
+----
+include::../javasrc/7/src/main/java/tdpe/example/domain/UserServiceImpl.java[tags=class]
+----
+
+<1> In der Implementierung laden wir den User aus der Datenbank, zurück bekommen wir ein `Optional`
+
+<2> Aus diesem lassen wir den `User` zurückgeben, wenn keiner vorhanden ist, soll eine `UsernameNotFoundException` geworfen werden
+
+=== Konfiguration
+
+Spring Security muss noch konfiguriert werden - sodass z.B. die Nutzer aus der
+Datenbank geladen werden und diese sich einloggen können.
+
+Dazu wird eine `SecurityConfig` angelegt:
+
+[source,java]
+.SecurityConfig.java
+----
+include::../javasrc/7/src/main/java/tdpe/example/SecurityConfig.java[tags=class]
+----
+
+<1> Die Klasse wird als Konfiguration gekennzeichnet und WebSecurity wird aktiviert
+
+<2> Für jede Seite lässt sich angeben, wer Zugriff auf diese hat.
+Auf den Pfad `"/"` sollte in diesem Fall jeder Zugriff habem (`permitAll`)
+
+<3> Außerdem soll es eine Seite mit einem Login geben (die unter dem Pfad `/login` erreichbar ist), auf die alle zugreifen können
+
+<4> und entsprechende auch einen Logout
+
+<5> hier wird konfiguriert, welcher UserDetailsService und welcher PasswordEncoder genutzt werden.
+Da die Methode mit `Autowired` annotiert ist, sucht Spring entsprechende Objekte (z.B. den mit `Service` annotierten `UserDetailsService`)
+
+<6> als PasswordEncoder stellen wir hier einen `BCryptPasswordEncoder` bereit.
+Da sie Methode mit `Bean` annotiert ist, steht Spring das zurückgegebene Objekt zur Verfügung,
+wie auch mit `Service` annotierte Klassen
+
+
+=== Starten
+
+Wir können die Anwendung wieder mit `./mvnw spring-boot:run` starten.
+
+Die Hauptseite sollte wieder die beiden Artikel zeigen.
+
+Außerdem können wir http://localhost:8080/login[^] aufrufen.
+Verwenden wir fasche Daten, erscheint eine Fehlermeldung, verwenden wir die in die
+Datenbank eingetragenen Daten (`Uncle_Bob`,`password`) erscheint keine.
+
+Der Login scheint also zu funktionieren - auch wenn er bisher noch keine weitere Funktion hat.

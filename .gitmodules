@@ -25,3 +25,4 @@
 [submodule "javasrc/7"]
 	path = javasrc/7
 	url = https://github.com/ybroeker/spring-example.git
+	branch = 7

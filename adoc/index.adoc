@@ -27,8 +27,11 @@ include::5.adoc[]
 
 //Datenbank
 include::6.adoc[]
+// 15 min
 
 // Sicherheit
+include::7_security.adoc[]
+
 
 // Artikel anlegen
 
