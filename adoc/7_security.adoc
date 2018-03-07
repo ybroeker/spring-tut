@@ -43,7 +43,7 @@ zurückgibt - diese können wir einfach aus der Liste der Rollen erzeugen lassen
 <6> Außerdem gibt es einige weitere den Zustand des Nutzers betreffende Methode -
 diese können aber erstmal ignoriert werden und geben einfach `true` zurück
 
-Da wir den Nutzer geändert haben, müssen wir die Beispieldaten im sql-Skript entsprechend anpassen:
+Da wir den Nutzer geändert haben, müssen wir die Beispieldaten im data.sql entsprechend anpassen:
 
 [source, sql]
 .data.sql
