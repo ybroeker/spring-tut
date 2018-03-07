@@ -1,7 +1,7 @@
 == Services
 
-Die Artikel des Blogs sollten natürlich nicht einfach so im Controller der Anwenung erstellt werden.
-Stattdessen sollte dieser die aus dem Model der Anwendung geladen werden, sodass man z.B. später eine Datenbank anbinden kann.
+Die Artikel des Blogs sollten natürlich nicht einfach so im Controller der Anwendung erstellt werden.
+Stattdessen sollte dieser die Artikel aus dem Model der Anwendung laden, sodass man z.B. später eine Datenbank anbinden kann.
 
 === Service-Interface
 
