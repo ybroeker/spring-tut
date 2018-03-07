@@ -109,7 +109,7 @@ include::../javasrc/7/src/main/java/tdpe/example/SecurityConfig.java[tags=class]
 <1> Die Klasse wird als Konfiguration gekennzeichnet und WebSecurity wird aktiviert
 
 <2> Für jede Seite lässt sich angeben, wer Zugriff auf diese hat.
-Auf den Pfad `"/"` sollte in diesem Fall jeder Zugriff habem (`permitAll`)
+Auf den Pfad `"/"` sollte in diesem Fall jeder Zugriff haben (`permitAll`)
 
 <3> Außerdem soll es eine Seite mit einem Login geben (die unter dem Pfad `/login` erreichbar ist), auf die alle zugreifen können
 
