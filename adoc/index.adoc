@@ -32,17 +32,16 @@ include::6.adoc[]
 // Sicherheit
 include::7_security.adoc[]
 
-
 // Artikel anlegen
+include::8_add_articles.adoc[]
+
+// Datenbank persistieren
 
 // einzelne Artikel anzeigen
 
 // Kommentare anlegen
 
-// Datenbank persitieren
-
 // Form Validation
-
 
 
 include::links.adoc[]
