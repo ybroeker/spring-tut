@@ -130,7 +130,7 @@ Wir können die Anwendung wieder mit `./mvnw spring-boot:run` starten.
 Die Hauptseite sollte wieder die beiden Artikel zeigen.
 
 Außerdem können wir http://localhost:8080/login[^] aufrufen.
-Verwenden wir fasche Daten, erscheint eine Fehlermeldung, verwenden wir die in die
+Verwenden wir falsche Daten, erscheint eine Fehlermeldung, verwenden wir die in die
 Datenbank eingetragenen Daten (`Uncle_Bob`,`password`) erscheint keine.
 
 Der Login scheint also zu funktionieren - auch wenn er bisher noch keine weitere Funktion hat.
