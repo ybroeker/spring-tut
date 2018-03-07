@@ -17,7 +17,7 @@ Diese müssen dazu einfach in der `<dependencies>`-Section der pom.xml eingefüg
 include::../javasrc/6/pom.xml[tags=db]
 ----
 
-<1> Dies enthält die nötigen APIs zur Verwednung von Spring-Data-JPA und JPA allgemein
+<1> Dies enthält die nötigen APIs zur Verwendung von Spring-Data-JPA und JPA allgemein
 
 <2> H2 ist eine einfache Embedded-Datenbank, die ohne weitere Einrichtung funktioniert.
 

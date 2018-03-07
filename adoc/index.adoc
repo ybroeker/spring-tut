@@ -16,14 +16,29 @@ include::1.adoc[]
 include::2.adoc[]
 
 include::3.adoc[]
+// 10 min
 
 include::4.adoc[]
+// 15 min
 
+//Services
 include::5.adoc[]
+// 10 min
 
+//Datenbank
 include::6.adoc[]
 
-include::7.adoc[]
+// Sicherheit
+
+// Artikel anlegen
+
+// einzelne Artikel anzeigen
+
+// Kommentare anlegen
+
+// Datenbank persitieren
+
+// Form Validation
 
 
 

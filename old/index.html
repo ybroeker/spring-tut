@@ -6,13 +6,55 @@
         <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/bootstrap-theme.css">
         <link rel="stylesheet" href="css/highlight/idea.css">
-        <link rel="stylesheet" href="css/custom.css">
-
         <script src="js/jquery.js"></script>
         <script src="js/bootstrap.js"></script>
         <script src="js/highlight.pack.js"></script>
-        <script src="js/custom.js"></script>
+        <style>
+            pre {
+                padding: 0;
+                font-family: monospace;
+                background-color: #f1f1ff;
+            }
 
+            body {
+                background-color: #eeeeee;
+                font-family: Helvetica;
+                text-align: justify;
+            }
+
+            hr {
+                margin-top: 50px;
+                margin-bottom: 50px;
+                border-color: #85858d;
+            }
+
+            .container {
+                background-color: white;
+                border-radius: 15px;
+            }
+
+            .jumbotron > .container {
+                background-color: transparent;
+            }
+        </style>
+        <script>
+            $(function () {
+                $('pre code').each(function (i, block) {
+                    hljs.highlightBlock(block);
+                });
+                var highlightInline = function (cssClass, language) {
+                    $("." + cssClass).each(function (i, block) {
+                        var jqBlock = $(block);
+                        var result = hljs.highlight(language, jqBlock.text());
+                        if (result.r) {
+                            jqBlock.html(result.value);
+                        }
+                    });
+                };
+                highlightInline("code-java", "java");
+                highlightInline("code-html", "html");
+            });
+        </script>
         <title>Spring Boot Tutorial - Ein Blog</title>
     </head>
     <body>
@@ -2035,7 +2077,7 @@ public class BlogUserDetailsServiceImpl implements BlogUserDetailsService {</cod
 private final PasswordEncoder passwordEncoder;
   
 @Autowired
-public BlogUserDetailsServiceImpl(UserRepository userRepository,PasswordEncoder passwordEncoder) {
+public BlogUserDetailsService(UserRepository userRepository,PasswordEncoder passwordEncoder) {
     this.userRepository = userRepository;
     this.passwordEncoder=passwordEncoder;
 }</code></pre>
@@ -2068,7 +2110,7 @@ public BlogUserDetailsServiceImpl(UserRepository userRepository,PasswordEncoder 
     }</code></pre>
 
 
-                        <p>Die Klasse BlogServiceImpl kann nun so angepasst werden, dass der neue <code>BlogUserDetailsService</code> anstatt des <code>UserDetailsService</code> genutzt werden kann:</p>
+                        <p>Die Klasse BlogPostImpl kann nun so angepasst werden, dass der neue <code>BlogUserDetailsService</code> anstatt des <code>UserDetailsService</code> genutzt werden kann:</p>
 
                         <pre><code>private final BlogPostRepository blogPostRepository;
 private final UserRepository userRepository;
@@ -2708,7 +2750,7 @@ public String search(@RequestParam(value = "search_query") String searchQuery, M
                                 http://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
                             </a>
                             </dt>
-                            <dd>Sprin-Data-JPA Query-Methods</dd>
+                            <dd>Spring data JPS Query-Methods</dd>
                             <br>
 
 
@@ -2775,34 +2817,14 @@ public String search(@RequestParam(value = "search_query") String searchQuery, M
 
 
                         </p>
-                        <pre><code>&lt;resources&gt;
+                        <pre><code>
+&lt;resources&gt;
     &lt;resource&gt;
         &lt;directory&gt;src/main/resources&lt;/directory&gt;
     &lt;/resource&gt;
-&lt;/resources&gt;
+<&lt;/resources&gt;
 </code></pre>
-                        <p>
-                            (u.U. müssen die html-Dateien in IntelliJ IDEA neu kompiliert werden: Rechtsklick auf Datei oder übergeordneten Ordner -> Compile '...'.
-                            Umgehen lässt sich dies mit "Compile On Save": Build, Execution, Deployment -> Compiler -> Make Project automatically)
-                        </p>  
-                        
-<h4>Autovervollständigung in templates</h4>
-                        <p>
-                            Für viele model-Attribute bietet IntelliJ IDEA innerhalb der Templates bereits Autovervollständigung.
-                            Für alle anderen, z.B. Listen von Objekten, kann man angeben, welcher Typ es ist.
-                        </p>
-                        <p>Für die View aus Schritt 4 sieht dies folgendermaßen aus:</p>
-                        
-                        <pre><code class="html">&lt;!--/*@thymesVar id="blogPosts" type="java.util.List&lt;de.unibielefeld.techfak.tdpe.thymeleaf.domain.BlogPost&gt;"*/--&gt;
-&lt;tr th:each="post:${blogPosts}"&gt;
-    ...
-&lt;/tr&gt;</code></pre>
-                        
-                        <p>IntelliJ IDEA 'weiß' damit, das <code>blogPosts</code> 
-                            vom Typ <code>java.util.List&lt;de.unibielefeld.techfak.tdpe.thymeleaf.domain.BlogPost&gt;</code> ist, 
-                            und kann dann sowohl für die Liste, als auch für Objekte aus der Liste (hier <code>post</code>) Autovervollständigung bieten.</p>
-                        
-                        
+
                         <h4>PUT, PATCH & DELETE in HTML</h4>
 
                         <p>
