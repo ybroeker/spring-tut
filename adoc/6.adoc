@@ -9,7 +9,7 @@ die einen Großteil der Arbeit beim Anbinden von Datenbanken abnimmt.
 === Dependencies
 
 Hinzufügen müssen wir erstmal nur folgende Dependencies.
-Diese müssen dazu einfach in der `<dependecnies>`-Section der pom.xml eingefügt werden:
+Diese müssen dazu einfach in der `<dependencies>`-Section der pom.xml eingefügt werden:
 
 [source,xml]
 .pom.xml
