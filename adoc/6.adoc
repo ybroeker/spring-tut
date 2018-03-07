@@ -145,7 +145,7 @@ Dazu wird eine Datei data.sql im Verzeichnis src/main/resources erstellt:
 
 
 [source, sql]
-.BlogServiceImpl.java
+.data.sql
 ----
 include::../javasrc/6/src/main/resources/data.sql[tags=]
 ----
