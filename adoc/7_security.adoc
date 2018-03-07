@@ -30,7 +30,7 @@ include::../javasrc/7/src/main/java/tdpe/example/domain/User.java[tags=class]
 
 <2> User brauchen ein Passwort
 
-<3> Außerdem eine Liste von Rollen, diese können einfach als String
+<3> Außerdem brauchen sie eine Liste von Rollen, diese können einfach als String
 (im Format `ROLE_USER`) gespeichert werden.
 Die Liste enthält nur einfache Datentypen, man kann sie deshlab mit
 `EementCollection` annotieren, damit sie passend in der Datenbank gespeichert werden
