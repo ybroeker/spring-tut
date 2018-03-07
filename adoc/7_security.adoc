@@ -51,7 +51,7 @@ Da wir den Nutzer geändert haben, müssen wir die Beispieldaten im sql-Skript e
 include::../javasrc/7/src/main/resources/data.sql[tags=]
 ----
 <1> Der Nutzer bekommt zusätzlich ein Passwort übergeben.
-Um zu verhinder, dass Passworter im Klartext in der Datenbank stehen, werden diese gehasht -
+Um zu verhindern, dass Passwörter im Klartext in der Datenbank stehen, werden diese gehasht -
 in diesem Fall mit BCrypt. In diesem Fall ist das Passwort zu diesem Hash `password`,
 hashen kann man diese z.B. mit http://bcrypthashgenerator.apphb.com/[^]
 
