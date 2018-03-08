@@ -83,7 +83,7 @@ include::../javasrc/7/src/main/java/tdpe/example/domain/UserRepository.java[tags
 ----
 include::../javasrc/7/src/main/java/tdpe/example/domain/UserService.java[tags=class]
 ----
-<1> UserDetailsService ist ein Interface von Spring, welches vom Framework zum Laden der Nutzers benutzt wird, diese erweitert unser UserService
+<1> UserDetailsService ist ein Interface von Spring, welches vom Framework zum Laden der Nutzer benutzt wird, diese erweitert unser UserService
 
 [source,java]
 .UserServiceImpl.java
