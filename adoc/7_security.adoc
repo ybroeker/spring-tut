@@ -33,7 +33,7 @@ include::../javasrc/7/src/main/java/tdpe/example/domain/User.java[tags=class]
 <3> Außerdem brauchen sie eine Liste von Rollen, diese können einfach als String
 (im Format `ROLE_USER`) gespeichert werden.
 Die Liste enthält nur einfache Datentypen, man kann sie deshalb mit
-`EementCollection` annotieren, damit sie passend in der Datenbank gespeichert werden.
+`ElementCollection` annotieren, damit sie passend in der Datenbank gespeichert werden.
 Zusätzlich geben wir als Fetch-Type `EAGER` an, damit die Nutzerrollen beim Laden eines
 Nutzers immer geladen werden
 
