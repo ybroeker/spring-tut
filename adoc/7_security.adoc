@@ -18,7 +18,7 @@ include::../javasrc/7/pom.xml[tags=security]
 === Nutzer anpassen
 
 Damit Spring die entsprechende Klasse als User erkennt, muss diese das Interface `UserDetails` implementieren.
-Dieses schreib u.a. ein Passwort sowie eine Liste von Rollen (z.B. User, Admin) vor.
+Dieses schreibt u.a. ein Passwort sowie eine Liste von Rollen (z.B. User, Admin) vor.
 
 [source,java]
 .User.java
