@@ -29,8 +29,8 @@ include::../javasrc/5/src/main/java/tdpe/example/web/BlogController.java[tags=cl
 ----
 
 <1> Hier benutzen wir wieder `@Autowired` -
-diese Annotation weißt Spring an, ein Objekt der Klasse `BlogService` zu übergeben,
-wenn die Klasse instanziert wird.
+diese Annotation weißt Spring an, ein Objekt der Klasse `BlogService` zu übergeben (_injizieren_),
+wenn die Klasse `BlogController` von Spring instanziert wird.
 
 <2> Den _injizierten_ `BlogService` benutzen wir dann, um eine Liste der Artikel zu erhalten.
 
