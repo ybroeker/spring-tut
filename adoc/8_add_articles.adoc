@@ -130,7 +130,7 @@ Wir können die Anwendung wieder mit `./mvnw spring-boot:run` starten.
 
 Wenn man auch den `neuer Artikel`-Link klickt, wird man zum Login weitergeleitet.
 
-Nach dem Login kommt man zu der Eingabemaske - gibt man dort etwas ein und bestätig,
+Nach dem Login kommt man zu der Eingabemaske - gibt man dort etwas ein und bestätigt,
 erscheint auf der Hauptseite ein neuer Artikel.
 
 TDOD Bilder
