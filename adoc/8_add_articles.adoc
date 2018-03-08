@@ -83,7 +83,7 @@ gefüllt werden soll. In diesem Fall das dem Model hinzugefügte `createArticleC
 einen POST statt GET-Request durchführt
 
 <2> Die Form enthält zwei input-Felder. Diese referenzieren mit `th:field` und `*{}` jeweils
-das zugehörige Feld aus dem hinterlegtem Model - `*{titel}` zb `createArticleCmd.title`
+das zugehörige Feld aus dem hinterlegtem Model - `*{titel}` z.B. `createArticleCmd.title`
 
 
 In der blog.html legen wir außerdem noch einen Link auf die neue Seite an:
