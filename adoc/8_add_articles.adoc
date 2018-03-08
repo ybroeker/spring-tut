@@ -100,7 +100,7 @@ include::../javasrc/8/src/main/resources/templates/blog.html[tag=link]
 
 === Artikel anlegen
 
-Damit die gesendete Form auch zum Anlegen eines neuen Artikels führt, muss im
+Damit die aus der `form` gesendeten Daten auch zum Anlegen eines neuen Artikels führt, muss im
 Controller noch eine entsprechende Methode angelegt werden:
 
 [source,java]
@@ -125,3 +125,10 @@ neuen Artikel zu erstellen
 Durch das `redirect:` führt dies dazu, dass der Browser auf die `/`-Seite unserer Anwednung weiterleitet
 
 === Starten
+
+Wir können die Anwendung wieder mit `./mvnw spring-boot:run` starten.
+
+Wenn man auch den `neuer Artikel`-Link klickt, wird man zum Login weitergeleitet.
+
+Nach dem Login kommt man zu der Eingabemaske - gibt man dort etwas ein und bestätig,
+erscheint auf der Hauptseite ein neuer Artikel.
