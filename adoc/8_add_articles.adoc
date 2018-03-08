@@ -33,7 +33,7 @@ include::../javasrc/8/src/main/java/tdpe/example/domain/BlogServiceImpl.java[tag
 ==== Controller
 
 Im Controller brauchen wir als erstes eine Methode, die eine View zurück gibt,
-in der man den neuen Artikels eingeben kann.
+in der man den neuen Artikel eingeben kann.
 
 [source,java]
 .BlogController.java
