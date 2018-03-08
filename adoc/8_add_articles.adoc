@@ -64,7 +64,7 @@ include::../javasrc/8/src/main/java/tdpe/example/web/CreateArticleCmd.java[tags=
 ==== View
 
 Das Command-Objekt nutzen wir dann in der View.
-Für diese legen wir in `src/main/resources` einen neuen Ordner `article` und in diesem
+Für diese legen wir in `src/main/resources/templates` einen neuen Ordner `article` und in diesem
 die Datei `add.html` an:
 
 [source, html]
