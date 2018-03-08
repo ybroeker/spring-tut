@@ -132,3 +132,5 @@ Wenn man auch den `neuer Artikel`-Link klickt, wird man zum Login weitergeleitet
 
 Nach dem Login kommt man zu der Eingabemaske - gibt man dort etwas ein und bestätig,
 erscheint auf der Hauptseite ein neuer Artikel.
+
+TDOD Bilder
