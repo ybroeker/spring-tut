@@ -75,7 +75,7 @@ include::../javasrc/8/src/main/resources/templates/article/add.html[]
 
 <1> Die Seite enthält eine einfache `form`
 * als `th:action` ist `@{/articles/add}` angegeben - `th:action` löst thymeleaf
-zu `action` auf und wertet dabei die angegeben URL aus. Dies ist die URL,
+zu `action` auf und wertet dabei die angegebene URL aus. Dies ist die URL,
 zu der die ausgefüllte Form geschickt wird
 * mit `th:object` verweisen wir auf das Model-Objekt, welches mit dieser Form
 gefüllt werden soll. In diesem Fall das dem Model hinzugefügte `createArticleCmd`
