@@ -17,8 +17,6 @@ RUN apt-get install -y \
     ruby-pygments \
     unzip
 RUN gem install --no-document asciidoctor --version "${asciidoctor_version}" \
-  && gem install --no-document asciidoctor-pdf --version 1.5.0.alpha.16 \
-  && gem install --no-document asciidoctor-revealjs --version 1.1.1 \
   && gem install --no-document asciidoctor-diagram
 
 WORKDIR /documents
