@@ -36,6 +36,7 @@ include::7_security.adoc[]
 include::8_add_articles.adoc[]
 
 // Datenbank persistieren
+include::9_persist_database.adoc[]
 
 // einzelne Artikel anzeigen
 

@@ -30,3 +30,7 @@
 	path = javasrc/8
 	url = https://github.com/ybroeker/spring-example.git
 	branch = 8
+[submodule "javasrc/9"]
+	path = javasrc/9
+	url = https://github.com/ybroeker/spring-example.git
+	branch = 9
