@@ -77,7 +77,7 @@ Damit die Datenbank auch gespeichert wird, müssen wir einfach einen Pfad für d
 [source,properties]
 .application.properties
 ----
-include::../javasrc/1/src/main/resources/application.properties[]
+include::../javasrc/9/src/main/resources/application.properties[]
 ----
 <1> Als Pfad  nutzen wir einfach das Unterverzeichnis `data`, in diesem wird dann die Datenbank `blog` erstellt.
 Der Pfad gibt dabei an, dass es eine `jdbc`-Datenbank vom Typ `h2` ist, die als Datei vorliegt
