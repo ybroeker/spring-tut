@@ -44,7 +44,7 @@ include::../javasrc/9/src/main/java/tdpe/example/domain/UserServiceImpl.java[tag
 
 <3> Und speichern den Nutzer und geben ihn zurück
 
-== Initializierung der Datenbank
+=== Initializierung der Datenbank
 
 Die Initialisierung der Datenbank können wir jetzt in eine extra Klasse verschieben,
 und die `data.sql` löschen.
@@ -70,7 +70,7 @@ muss die Datenbank nicht weiter gefüllt werde
 Die `data.sql` muss gelöscht werden!
 ====
 
-== Speichern der Datenbank
+=== Speichern der Datenbank
 
 Damit die Datenbank auch gespeichert wird, müssen wir einfach einen Pfad für diese angeben:
 
@@ -86,7 +86,7 @@ Der Pfad gibt dabei an, dass es eine `jdbc`-Datenbank vom Typ `h2` ist, die als 
 Dadurch wir die Datenbank beim starten de Anwendnung an das aktuelle Schema angepasst.
 Normalerweise steht dies auf `create-drop`, damit würde die Anwendung be jedem Starten neu erstellt und beim Beenden gelöscht (`drop`) werden
 
-== Starten
+=== Starten
 
 Wir können die Anwendung wieder starten.
 
