@@ -1,0 +1,73 @@
+== Form Validation
+
+Momentan ist es möglich, das Formular zum Erstellen eines neuen Blogeintrags leer abzusenden. Im diesem Fall wird auch tatsächlich ein leerer Eintrag erstellt und taucht danach auf der Startseite auf.
+
+Schöner wäre es natürlich, wenn der Autor darauf hingewiesen würde dass alle Formularfelder ausgefüllt sein müssen und ein unvollständig ausgefülltes Formular niemals in der Datenbank landen kann.
+
+Hierfür wird Bean Validation verwendet. Dabei handelt es sich um einen Java EE-Standard, der z.B. vom Hibernate-Projekt implementiert wird.
+
+=== Controller & Command-Object
+
+==== Command-Object
+
+Innerhalb von `CreateArticleCmd` kann man mit Annotationen angeben,
+welche Bedingungen die Felder erfüllen müssen. Dazu lassen sich z.B. die Klassen aus dem
+Package `javax.validation.constraints` nutzen:
+
+[source,java]
+.CreateArticleCmd.java
+----
+include::../javasrc/10/src/main/java/tdpe/example/web/CreateArticleCmd.java[tags=validation]
+----
+
+<1> `NotBlank` gibt dabei z.B. an, dass der String nicht leer sein darf
+
+==== Controller
+
+Außerdem müssen wir den Controller noch anpassen.
+Dieser muss angeben, dass das Command-Objekt validiert werden soll,
+und muss auf das Ergebniss dieser entsprechend reagieren:
+
+[source,java]
+.BlogController.java
+----
+include::../javasrc/10/src/main/java/tdpe/example/web/BlogController.java[tags=validation]
+----
+
+<1> Das Command-Object muss mit `@Valid` annotiert werden
+
+<2> Das Ergebnis wird in einem `BindingResult` angelegt.
+Dieses muss als Parameter direkt auf das Command-Object folgen
+
+<3> Vor dem Anlegen eines Artikels können wir dann prüfen,
+ob dieses Fehler enthält
+
+<4> Tut es dies, geben wir die View zum hinzufügen eines Artikels an
+
+<5> Und geben als Model das ausgefüllte Command-Object, welches die Fehler enthält, mit
+
+
+=== View
+
+In der View für das zu validierende Formular müssen nun noch ggf. anfallende Fehlermeldungen angezeigt werden.
+
+[source, html]
+.add.html
+----
+include::../javasrc/10/src/main/resources/templates/article/add.html[]
+----
+
+<1> Wir prüfen, ob Fehler vorliegen.
+Wenn ja, geben wir mit `th:errors` alle Fehlermeldungen aus
+Dabei geben wir jeweils das entsprechende Feld an
+
+<2> Dies dient dabei nur als Platzhalter, und wird später durch `th:errors` mit den
+echten Fehlermeldungen ersetzt
+
+=== Starten
+
+Wir können die Anwendung wieder starten.
+
+Tätigt man nun fehlerhafte Eingaben, erhält man Fehlermeldungen und es wird kein neuer BlogPost erstellt.
+
+
