@@ -90,5 +90,5 @@ Normalerweise steht dies auf `create-drop`, damit würde die Anwendung be jedem 
 
 Wir können die Anwendung wieder starten.
 
-Fügen wir Artikel hinzu, beenden die Anwedung und starten sie neu,
+Fügen wir Artikel hinzu, beenden die Anwendung und starten sie neu,
 sind die alten Artikel immer noch vorhanden
