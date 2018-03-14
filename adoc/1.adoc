@@ -11,11 +11,22 @@ Außerdem gibt es den https://start.spring.io/[SPRING INITIALIZR^], mit dem sich
 
 Für uns reicht es, dass vorbereitete Repo zu klonen:
 
+Für Tutoren:
+[source, console]
+----
+git clone https://tdpe.techfak.uni-bielefeld.de/git/tdpe-tut-sommer-2018.exploration.git spring-tut
+cd spring-tut
+git checkout java18
+git checkout -b _techfak_login_
+----
+
 [source, console]
 ----
 TODO
 git clone https://github.com/ybroeker/spring-example.git
 ----
+
+
 
 Wie das hier generierte Projekt im Detail aussieht, sehen wir uns im nächsten Schritt an.
 
