@@ -8,7 +8,7 @@
 
 Entwickelt werden soll ein einfacher Blog, welcher Autoren das Anlegen von neuen Artikeln und Lesern das Kommentieren von diesen erlauben soll.
 
-Anhand der kurzen Beschreibung kann man auch schon direkt einzelne konzeptuelle Klassen TODO erkennen:
+Anhand der kurzen Beschreibung kann man auch schon direkt einzelne konzeptuelle Klassen erkennen:
 
 * Nutzer
 * Artikel
