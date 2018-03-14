@@ -29,7 +29,7 @@ müssen diese mit entsprechenden JPA-Annotationen annotiert werden.
 
 [NOTE]
 ====
-JPA ist die https://de.wikipedia.org/wiki/Java_Persistence_API[**J**ava **P**ersistance **A**pi TODO]
+JPA ist die https://de.wikipedia.org/wiki/Java_Persistence_API[**J**ava **P**ersistance **A**pi]
 ====
 
 
