@@ -93,7 +93,7 @@ include::../javasrc/11/src/main/resources/templates/article/article.html[]
 
 <1> Wir lassen die Title und Text des Artikels wie auch auf der Hauptseite ausgeben
 
-<2> Außerdem zeige wir den Zeitpunkt des Artikels an.
+<2> Außerdem zeigen wir den Zeitpunkt des Artikels an.
 Dazu nutzen wir das `#temporals`-Objekt,
 welches von Thymeleaf zum Formatieren von Daten angeboten wird.
 Darauf rufen wir die `format`-Methode auf, die ein Datum lesbar formatiert,
