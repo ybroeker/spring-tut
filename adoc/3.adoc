@@ -58,7 +58,7 @@ Artikel "n" --> "1" Nutzer : geschrieben von
 
 === Klassen
 
-Die grad entwickelten Klassen können nun implementiert werden. Dazu legen wir ein neues Package an, `domain`, und erstellen darin die Klassen:
+Die grad entwickelten Klassen können nun implementiert werden. Die Klassen dazu legen wir im Package `domain` an:
 
 [source,java]
 .User.java
