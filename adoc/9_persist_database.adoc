@@ -38,7 +38,7 @@ include::../javasrc/9/src/main/java/tdpe/example/domain/User.java[tags=addRole]
 include::../javasrc/9/src/main/java/tdpe/example/domain/UserServiceImpl.java[tags=createUser]
 ----
 
-<1> Wir erstellen den neuen Nutzer mit den übergebenen Datem
+<1> Wir erstellen den neuen Nutzer mit den übergebenen Daten
 
 <2> Wir fügen alle Rollen hinzu
 

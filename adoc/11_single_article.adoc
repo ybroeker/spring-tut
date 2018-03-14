@@ -95,7 +95,7 @@ include::../javasrc/11/src/main/resources/templates/article/article.html[]
 
 <2> außerdem zeige wir den Zeitpunkt des Artikels an.
 Dazu nutzen wir das `#temporals`-Objekt,
-welches von Thymeleaf zum Formatieren von Daten abgeboten wird.
+welches von Thymeleaf zum Formatieren von Daten angeboten wird.
 Darauf rufen wir die `format`-Methode auf, die ein Datum lesbar formatiert,
 und übergeben den Veröffentlichungszeitpunkt des Artikels
 
