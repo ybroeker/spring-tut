@@ -85,8 +85,8 @@ Außerdem legen wir eine neue Methode `addComment` an:
 include::../javasrc/12/src/main/java/tdpe/example/web/BlogController.java[tags=add_comment]
 ----
 
-<1> Diese soll nur auf POST-Request an den Unter-Pfad `comments` einen
-einzelnen Artikels reagieren,
+<1> Diese soll nur auf POST-Request an den Unter-Pfad `comments` eines
+einzelnen Artikels reagieren
 
 <2> Als Parameter brauchen wir wieder die ID des Artikels und das validierte Command-Object
 
