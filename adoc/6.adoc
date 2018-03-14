@@ -42,7 +42,7 @@ include::../javasrc/6/src/main/java/tdpe/example/domain/Article.java[tags=jpa]
 
 <2> Jeder Entität braucht eine ID, einen eindeutigen Identifier.
 Ein Artikel hat im Datenmodell bisher keinen einzigartigen Wert, wir führen deshalb eine "künstliche" ID ein.
-Dieses ist einfach ein `Long`, welcher autogeneriert werden soll
+Dieses ist einfach ein `Long`, welcher von der Datenbank beim Speichern generiert werden soll
 
 <3> `author` muss als Assoziation gekennzeichnet werden.
 `ManyToOne` gibt dabei an, dass viele Artikel zu einem User gehören
@@ -58,6 +58,10 @@ Dieses ist einfach ein `Long`, welcher autogeneriert werden soll
 
 <8> Jede Entität braucht einen parameterlosen Konstruktor. Dieser kann `protected` sein, damit man ihn nicht versehentlich benutzt
 
+[NOTE]
+====
+Getter für die neu hinzukommenden Felder nicht vergessen!
+====
 [source,java]
 .Comment.java
 ----
