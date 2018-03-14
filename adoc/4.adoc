@@ -114,7 +114,7 @@ to {[/]}: There is already 'blogController' bean method
 In dem Projekt existiert noch der ursprüngliche WelcomeController,
 welcher auch ein RequestMapping für `/` bereitstellt.
 Zwei gleiche Mappings sind nicht möglich - ihr müsst deshalb das Mapping für
-den `WelcomeController` angepasst werden.
+den `WelcomeController` angepasst werden, z.B. auf `@RequestMapping(/welcome)`.
 
 Danach laufen auch die Integration-Tests erfolgreich durch:
 
