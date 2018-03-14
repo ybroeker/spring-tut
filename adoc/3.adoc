@@ -77,7 +77,7 @@ include::../javasrc/2/src/main/java/tdpe/example/domain/Article.java[tags=class]
 <1> Die Liste initialisieren wir direkt - so verhindern wir NullPointer.
 Außerdem übergeben wir diese nicht dem Konstruktor - ein neuer Artikel hat noch keine Kommentare.
 
-<2> Den Veröffentlichungs-Zeitpunk setzten wir direkt im Konstruktor, anstatt ihn zu übergeben.
+<2> Den Veröffentlichungs-Zeitpunkt setzten wir direkt im Konstruktor, anstatt ihn zu übergeben.
 
 [source,java]
 .Comment.java
@@ -86,7 +86,7 @@ include::../javasrc/2/src/main/java/tdpe/example/domain/Comment.java[tags=class]
 }
 ----
 
-<1> Auch hier setzen wir den Erstell-Zeitpunk direkt im Konstruktor, anstatt ihn zu übergeben.
+<1> Auch hier setzen wir den Erstell-Zeitpunkt direkt im Konstruktor, anstatt ihn zu übergeben.
 
 
 [IMPORTANT]
