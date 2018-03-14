@@ -51,7 +51,7 @@ Der Teil innerhalb der geschweiften Klammern nennt sich Path-Variable und ist im
 genau das - ein variabler Teil innerhalb des Pfades.
 Dieser bekommt einen Namen, `id`, und in diesem Fall zusätzlich einen regulären Audruck,
 der valide Belegungen angibt, in diesem Fall `\d+`, also mindestens eine Ziffer.
-Die Methode regaiert damit auf Pfade wie z.B. `/articles/0` und `/articles/123`,
+Die Methode reagiert damit auf Pfade wie z.B. `/articles/0` und `/articles/123`,
 aber nicht auf `/articles/a` oder `/articles/0a`
 
 <2> Die `PathVariable` können wir dann als Methoden-Parameter angeben.
