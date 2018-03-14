@@ -2,9 +2,9 @@
 
 === Grundlage für eigenes Projekt
 
-* Anpassen group, artifact
+* In der pom.xml sollten groupId und artifactID des Projektes angepasst werden
 
-TODO
+* Die ExampleApplication sollte einen sinnvolleren Namen für euer Programm bekommen
 
 === Build-Artefakte
 
