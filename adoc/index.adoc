@@ -42,8 +42,7 @@ include::9_persist_database.adoc[]
 include::10_form_validation.adoc[]
 
 // einzelne Artikel anzeigen
-
-
+include::11_single_article.adoc[]
 // Kommentare anlegen
 
 
