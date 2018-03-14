@@ -43,7 +43,9 @@ include::10_form_validation.adoc[]
 
 // einzelne Artikel anzeigen
 include::11_single_article.adoc[]
+
 // Kommentare anlegen
+include::12_add_comment.adoc[]
 
 
 

@@ -1,0 +1,122 @@
+== Kommentare hinzufügen
+
+Zu den einzelnen Artikel sollen sich jetzt noch Kommentare hinzufügen lassen.
+
+Dazu brauchen wir:
+
+* Entsprechende Methoden im Service und eine kleine Anpassung an der Artikel-Klasse
+* ein Command-Objekt zum anlegen der Kommentare
+* passende Methoden im Controller
+* eine Liste der Kommentare auf der Artikel-Seite
+* und ein entsprechendes Formular auf der Artikel-Seite
+
+
+=== Service anpassen
+
+Dem Interface fügen wir eine entsprechende Methode zum Hinzufügen eines
+Kommentars hinzu:
+
+[source,java]
+.BlogService.java
+----
+include::../javasrc/12/src/main/java/tdpe/example/domain/BlogService.java[tags=add_comment]
+----
+
+
+Diese Methode implementieren wir dann entsprechend:
+
+[source,java]
+.BlogServiceImpl.java
+----
+include::../javasrc/12/src/main/java/tdpe/example/domain/BlogServiceImpl.java[tags=add_comment]
+----
+
+<1> wir laden den entsprechenden Artikel aus dem Repository
+
+<2> fügen diesem den Kommentar hinzu
+
+<3> und speichern ihn dann und geben ihn zurück
+
+=== Artikel anpassen
+
+Damit Kommentare sich so speichern lassen, müssen wir eine kleine Änderung an der Artikel-Klasse vornehmen:
+
+[source,java]
+.Article.java
+----
+include::../javasrc/12/src/main/java/tdpe/example/domain/Article.java[tags=comments]
+----
+
+<1> für die Beziehung geben wir zusätzlich `cascade = CascadeType.ALL` an.
+Damit werden beim Speichern eines Artikels auch alle diesem hinzugefügten Kommentare
+gespeichert, ohne das wir dies explizit selbst machen müssen
+
+=== Command-Object
+
+Als Command-Object legen wir `AddCommentCmd` mit einem einzigen Attribut `text` an:
+
+[source,java]
+.AddCommentCmd.java
+----
+include::../javasrc/12/src/main/java/tdpe/example/web/AddCommentCmd.java[]
+----
+
+=== Controller anpassen
+
+Im Controller müssen wir eine kleine Anpassung vornehmen sowei eine Methode zum
+hinzufügen der Kommentare anlegen.
+
+Zuerst müssen wir beim Anzeigen der Kommentare auch dass Command-Object der View hinzufügen:
+
+
+[source,java]
+.BlogController.java
+----
+include::../javasrc/12/src/main/java/tdpe/example/web/BlogController.java[tags=single_article]
+----
+
+<1> wir legen dazu einfach ein neues Command-Object an und legen dieses in das Model
+
+Außerdem legen wir eine neue Methode `addComment` an:
+
+[source,java]
+.BlogController.java
+----
+include::../javasrc/12/src/main/java/tdpe/example/web/BlogController.java[tags=add_comment]
+----
+
+<1> diese soll nur auf POST-Request an den Unter-Pfad `comments` einen
+einzelnen Artikels reagieren,
+
+<2> als Parameter brauchen wir wieder die ID des Artikels und das validierte Command-Object
+
+<3> wir prüfen, ob dieses keine fehlerhaften Felder enthält
+
+<4> ist es in Ordnung, fügen wir den Kommentar hinzu, ansonsten machen wir nichts weiter
+
+<5> Danach leiten wir wieder auf die normale Artikel-Seite weiter
+
+
+=== View anpassen
+
+In der View müssen wir jetzt noch eine Liste alle Kommentare und ein Fomular zum
+hinzufügen neuer Kommentare hinzufügen:
+
+[source, html]
+.article.html
+----
+include::../javasrc/12/src/main/resources/templates/article/article.html[]
+----
+
+<1> wir iterieren über alle Kommentare eines Artikels und lassen jeweils deren Text anzeigen
+
+<2> die Form hat als `action` das Mapping des Controllers eingetragen.
+Außerdem referenzieren wir wieder das Command-Object
+
+<3> Die Form enthält dann nur ein einfaches Textfeld zur Eingabe des Kommentars
+
+
+=== Starten
+
+Wenn wie die Anwendung starten, und einen einzelnen Artikel (z.B. http://localhost:8080/articles/1)
+anzeigen lassen, können wir diesem Kommentare hinzufügen
