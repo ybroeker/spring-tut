@@ -47,7 +47,7 @@ Dieses ist einfach ein `Long`, welcher von der Datenbank beim Speichern generier
 <3> `author` muss als Assoziation gekennzeichnet werden.
 `ManyToOne` gibt dabei an, dass viele Artikel zu einem User gehören
 
-<4> `title` ist ein einfacher Wert und entspricht deshalb in der Datenbank einer Spalte,  wird deshalb als Column gekennzeichnet
+<4> `title` ist ein einfacher Wert und entspricht deshalb in der Datenbank einer Spalte,  wird deshalb als `Column` gekennzeichnet
 
 <5> `text` ist auch eine `Column`, zusätzlich aber auch ein `Lob`, welches beliebig große Texte erlaubt
 (`Column` ist Standardmäßig 255 Zeichen lang, lässt sich aber auf einen höheren Wert festlegen)
@@ -146,7 +146,6 @@ include::../javasrc/6/src/main/java/tdpe/example/domain/BlogServiceImpl.java[tag
 
 <1> Der Konstuktor hat als Argument ein `ArticleRepository` und Spring wird mit `Autowired` angewiesen, ein ensprechendes Objekt zu übergeben
 
-<2> Aus dem `ArticleRepository` werden dann die Artikel geladen, der Liste hinzugefügt und diese dann zurückgegeben
 <2> Aus dem `ArticleRepository` werden dann die Artikel geladen, der Liste hinzugefügt und diese dann zurückgegeben
 
 === Beispieldaten

@@ -82,7 +82,7 @@ include::../javasrc/9/src/main/resources/application.properties[tags=db]
 <1> Als Pfad  nutzen wir einfach das Unterverzeichnis `data`, in diesem wird dann die Datenbank `blog` erstellt.
 Der Pfad gibt dabei an, dass es eine `jdbc`-Datenbank vom Typ `h2` ist, die als Datei vorliegt
 
-<2> Zusätzlich setzen wir noch die `ddl-auto`-Propertie auf `update`.
+<2> Zusätzlich setzen wir noch die `ddl-auto`-Property auf `update`.
 Dadurch wir die Datenbank beim Starten der Anwendung an das aktuelle Schema angepasst.
 Normalerweise steht dies auf `create-drop`, damit würde die Anwendung be jedem Starten neu erstellt und beim Beenden gelöscht (`drop`) werden
 

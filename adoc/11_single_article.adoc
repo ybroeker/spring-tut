@@ -47,7 +47,7 @@ include::../javasrc/11/src/main/java/tdpe/example/web/BlogController.java[tags=s
 ----
 
 <1> Der Pfad, auf den die Methode reagieren soll, sieht auf den ersten Blick erst mal komisch auf.
-Der Teil innerhalb der geschweiften Klammern nennt sich Path-Variable und ist im wesentlichen
+Der Teil innerhalb der geschweiften Klammern nennt sich Path-Variable und ist im Wesentlichen
 genau das - ein variabler Teil innerhalb des Pfades.
 Dieser bekommt einen Namen, `id`, und in diesem Fall zusätzlich einen regulären Audruck,
 der valide Belegungen angibt, in diesem Fall `\d+`, also mindestens eine Ziffer.

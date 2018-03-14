@@ -26,7 +26,7 @@ include::../javasrc/10/src/main/java/tdpe/example/web/CreateArticleCmd.java[tags
 
 Außerdem müssen wir den Controller noch anpassen.
 Dieser muss angeben, dass das Command-Objekt validiert werden soll,
-und muss auf das Ergebniss dieser entsprechend reagieren:
+und muss auf das Ergebnis dieser entsprechend reagieren:
 
 [source,java]
 .BlogController.java
@@ -42,7 +42,7 @@ Dieses muss als Parameter direkt auf das Command-Object folgen
 <3> Vor dem Anlegen eines Artikels können wir dann prüfen,
 ob dieses Fehler enthält
 
-<4> Tut es dies, geben wir die View zum hinzufügen eines Artikels an
+<4> Tut es dies, geben wir die View zum Hinzufügen eines Artikels an
 
 <5> Und geben als Model das ausgefüllte Command-Object, welches die Fehler enthält, mit
 

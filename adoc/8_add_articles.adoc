@@ -2,7 +2,7 @@
 
 Angemeldete Nutzer sollen natürlich auch Artikel schreiben können.
 
-Was wir dazu brauchen, sind im wesentlichen eine Eingabemaske (View), ein Controller,
+Was wir dazu brauchen, sind im Wesentlichen eine Eingabemaske (View), ein Controller,
 der die Eingaben verarbeitet, und einen Service, der die neuen Artikel speichert.
 
 === Service
@@ -83,7 +83,7 @@ gefüllt werden soll. In diesem Fall das dem Model hinzugefügte `createArticleC
 einen POST statt GET-Request durchführt
 
 <2> Die Form enthält zwei input-Felder. Diese referenzieren mit `th:field` und `*{}` jeweils
-das zugehörige Feld aus dem hinterlegtem Model - `*{titel}` z.B. `createArticleCmd.title`
+das zugehörige Feld aus dem hinterlegtem Model - `*{title}` z.B. `createArticleCmd.title`
 
 [NOTE]
 ====
@@ -112,7 +112,7 @@ include::../javasrc/8/src/main/java/tdpe/example/web/BlogController.java[tags=po
 <1> Statt einem `GetMapping` benutzen wir ein `PostMapping`,
 damit auf POST-Request statt GET-Requests reagiert wird
 
-<2> Übergeben beokmmt die Methode ein Objekt unserer Nutzer-Klasse. Dieses ist
+<2> Übergeben bekommt die Methode ein Objekt unserer Nutzer-Klasse. Dieses ist
 mit `AuthenticationPrincipal` annotiert, sodass Spring dort den aktuell
 angemeldeten Nutzer übergibt
 
@@ -133,4 +133,4 @@ Wenn man auch den `neuer Artikel`-Link klickt, wird man zum Login weitergeleitet
 Nach dem Login kommt man zu der Eingabemaske - gibt man dort etwas ein und bestätigt,
 erscheint auf der Hauptseite ein neuer Artikel.
 
-TDOD Bilder
+TODO Bilder
