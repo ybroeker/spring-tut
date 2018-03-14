@@ -56,7 +56,7 @@ aber nicht auf `/articles/a` oder `/articles/0a`
 
 <2> Die `PathVariable` können wir dann als Methoden-Parameter angeben.
 Dazu muss diese mit `@PathVariable` annotiert sein, der passende Name muss angegeben sein
-und sie muss einen passenden Typ haben.
+und sie muss einen passenden Typ haben
 
 <3> Als View geben wir "article/article" an, dieses referenziert damit auf `src/main/resources/templates/article/article.html`,
 welche wir gleich noch anlegen
