@@ -7,9 +7,9 @@ sollten auch einzelne Artikel angezeigt werden können.
 
 Damit das möglich ist, muss:
 
-* der `BlogService` entsprechend anpassen,
+* Der `BlogService` entsprechend anpassen,
 sodass einzelne Artikel abgefragt werden können.
-* der Controller muss auf entsprechende Seitenaufrufe reagieren können
+* Der Controller muss auf entsprechende Seitenaufrufe reagieren können
 * Die `SecurityCofig` muss diese Aufrufe zulassen
 * Eine passende View muss hinzugefügt werden
 

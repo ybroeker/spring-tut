@@ -58,7 +58,7 @@ include::../javasrc/10/src/main/resources/templates/article/add.html[]
 ----
 
 <1> Wir prüfen, ob Fehler vorliegen.
-Wenn ja, geben wir mit `th:errors` alle Fehlermeldungen aus
+Wenn ja, geben wir mit `th:errors` alle Fehlermeldungen aus.
 Dabei geben wir jeweils das entsprechende Feld an
 
 <2> Dies dient dabei nur als Platzhalter, und wird später durch `th:errors` mit den
