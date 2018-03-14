@@ -58,7 +58,7 @@ Der Unit-Test testet erstmal nur, ob der Controller auch die passende View zurü
 ----
 include::../javasrc/3/src/test/java/tdpe/example/web/BlogControllerTest.java[tags=test]
 ----
-<1> Hierbei müssen wir den Namen der View überprüfen, nicht direkt die View.
+<1> Hierbei müssen wir den Namen der View überprüfen, nicht direkt die View
 
 ==== Integration-Test
 
