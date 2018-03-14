@@ -5,10 +5,10 @@ Zu den einzelnen Artikel sollen sich jetzt noch Kommentare hinzufügen lassen.
 Dazu brauchen wir:
 
 * Entsprechende Methoden im Service und eine kleine Anpassung an der Artikel-Klasse
-* ein Command-Objekt zum anlegen der Kommentare
-* passende Methoden im Controller
-* eine Liste der Kommentare auf der Artikel-Seite
-* und ein entsprechendes Formular auf der Artikel-Seite
+* Ein Command-Objekt zum anlegen der Kommentare
+* Passende Methoden im Controller
+* Eine Liste der Kommentare auf der Artikel-Seite
+* Und ein entsprechendes Formular auf der Artikel-Seite
 
 
 === Service anpassen
