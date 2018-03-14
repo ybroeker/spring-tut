@@ -1,6 +1,6 @@
 == Form Validation
 
-Momentan ist es möglich, das Formular zum Erstellen eines neuen Blogeintrags leer abzusenden. Im diesem Fall wird auch tatsächlich ein leerer Eintrag erstellt und taucht danach auf der Startseite auf.
+Momentan ist es möglich, das Formular zum Erstellen eines neuen Blogeintrags leer abzusenden. In diesem Fall wird auch tatsächlich ein leerer Eintrag erstellt und taucht danach auf der Startseite auf.
 
 Schöner wäre es natürlich, wenn der Autor darauf hingewiesen würde dass alle Formularfelder ausgefüllt sein müssen und ein unvollständig ausgefülltes Formular niemals in der Datenbank landen kann.
 
