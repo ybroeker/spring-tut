@@ -47,7 +47,7 @@ Damit Kommentare sich so speichern lassen, müssen wir eine kleine Änderung an 
 include::../javasrc/12/src/main/java/tdpe/example/domain/Article.java[tags=comments]
 ----
 
-<1> für die Beziehung geben wir zusätzlich `cascade = CascadeType.ALL` an.
+<1> Für die Beziehung geben wir zusätzlich `cascade = CascadeType.ALL` an.
 Damit werden beim Speichern eines Artikels auch alle diesem hinzugefügten Kommentare
 gespeichert, ohne das wir dies explizit selbst machen müssen
 
