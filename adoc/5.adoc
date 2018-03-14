@@ -17,6 +17,10 @@ include::../javasrc/5/src/main/java/tdpe/example/domain/BlogService.java[tags=cl
 
 Der Service bekommt erstmal nur eine einzelne Methode - zum Laden aller Artikel.
 
+[NOTE]
+====
+Services werden im `domain`-Package erstellt.
+====
 
 === Controller anpassen
 

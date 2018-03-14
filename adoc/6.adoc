@@ -107,8 +107,14 @@ Wir können dazu einfach das von Spring bereitgestellte Interface `CrudRepositor
 include::../javasrc/6/src/main/java/tdpe/example/domain/ArticleRepository.java[tags=class]
 ----
 
-CrudRepository stellt dabei Methoden zum Erstellen (Create), Lesen (Read), Updaten (Update) und Löschen (Delete) von Datensätzen bereit.
+Repository stellt dabei Methoden zum Erstellen (Create), Lesen (Read), Updaten (Update) und Löschen (Delete) von Datensätzen bereit.
 Angeben müssen wir nur den Typ der Entität (`Article`) und der Id (`Long`).
+
+
+[NOTE]
+====
+Repositorys werden im `domain`-Package erstellt.
+====
 
 
 === Aktivieren
