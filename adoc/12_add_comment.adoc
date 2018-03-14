@@ -100,7 +100,7 @@ einzelnen Artikels reagieren
 === View anpassen
 
 In der View müssen wir jetzt noch eine Liste alle Kommentare und ein Fomular zum
-hinzufügen neuer Kommentare hinzufügen:
+Hinzufügen neuer Kommentare hinzufügen:
 
 [source, html]
 .article.html
