@@ -25,7 +25,7 @@ Für die View aus Schritt 4 sieht dies folgendermaßen aus:
     ...
 </tr>
 ----
-IntelliJ IDEA 'weiß' damit, das <code>blogPosts</code>
+IntelliJ IDEA "weiß" damit, das `blogPosts`
 vom Typ `java.util.List<de.unibielefeld.techfak.tdpe.thymeleaf.domain.BlogPost>` ist,
 und kann dann sowohl für die Liste, als auch für Objekte aus der Liste (hier `post`) Autovervollständigung bieten.
 
