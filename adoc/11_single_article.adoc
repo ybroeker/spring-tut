@@ -120,4 +120,4 @@ legen danach fest, wie diese gefüllt werden sollen (`article_id=${article.id}`)
 
 Wenn wir starten, sehen wir auf der Hauptseite Links zu den einzelnen Artikeln.
 
-Öffnen wir damit einen, sehen wir den eizelnen Artikel zusammen mit dem Zeitpunkt.
+Öffnen wir damit einen, sehen wir den einzelnen Artikel zusammen mit dem Zeitpunkt.
