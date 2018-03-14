@@ -34,9 +34,9 @@ include::../javasrc/11/src/main/java/tdpe/example/domain/BlogServiceImpl.java[ta
 
 <1> `Article` haben als ID einen `Long`, den übergebenen String müssen wir also parsen
 
-<2> mit der ID fragen wir dann den Artikel ab
+<2> Mit der ID fragen wir dann den Artikel ab
 
-<3> wird einer gefunden, geben wir diesen zurück, ansonsten werfen wir eine Exception
+<3> Wird einer gefunden, geben wir diesen zurück, ansonsten werfen wir eine Exception
 
 === Controller anpassen
 
@@ -54,14 +54,14 @@ der valide Belegungen angibt, in diesem Fall `\d+`, also mindestens eine Ziffer.
 Die Methode regaiert damit auf Pfade wie z.B. `/articles/0` und `/articles/123`,
 aber nicht auf `/articles/a` oder `/articles/0a`
 
-<2> die `PathVariable` können wir dann als Methoden-Parameter angeben.
+<2> Die `PathVariable` können wir dann als Methoden-Parameter angeben.
 Dazu muss diese mit `@PathVariable` annotiert sein, der passende Name muss angegeben sein
 und sie muss einen passenden Typ haben.
 
-<3> als View geben wir "article/article" an, dieses referenziert damit auf `src/main/resources/templates/article/article.html`,
+<3> Als View geben wir "article/article" an, dieses referenziert damit auf `src/main/resources/templates/article/article.html`,
 welche wir gleich noch anlegen
 
-<4> dann laden wir über den Service den entsprechenden Artikel und übergeben diesen dem Model
+<4> Dann laden wir über den Service den entsprechenden Artikel und übergeben diesen dem Model
 
 === Security-Config anpassen
 
@@ -76,7 +76,7 @@ Dazu müssen wir den Pfad der Security-Config hinzufügen:
 include::../javasrc/11/src/main/java/tdpe/example/SecurityConfig.java[tags=configure]
 ----
 
-<1> wir geben dazu einfach den Pfad, auf den der Controller reagiert,
+<1> Wir geben dazu einfach den Pfad, auf den der Controller reagiert,
 als weiteren Pfad an, auf den alle zugreifen dürften
 
 === View erstellen
@@ -91,9 +91,9 @@ in `src/main/resource/templates/article`:
 include::../javasrc/11/src/main/resources/templates/article/article.html[]
 ----
 
-<1> wir lassen die Title und Text des Artikels wie auch auf der Hauptseite ausgeben
+<1> Wir lassen die Title und Text des Artikels wie auch auf der Hauptseite ausgeben
 
-<2> außerdem zeige wir den Zeitpunkt des Artikels an.
+<2> Außerdem zeige wir den Zeitpunkt des Artikels an.
 Dazu nutzen wir das `#temporals`-Objekt,
 welches von Thymeleaf zum Formatieren von Daten angeboten wird.
 Darauf rufen wir die `format`-Methode auf, die ein Datum lesbar formatiert,
@@ -110,7 +110,7 @@ Diesen fügen wir in blog.html hinzu:
 include::../javasrc/11/src/main/resources/templates/blog.html[tags=articles]
 ----
 
-<1> die Überschrift umschließen wir dazu mit einem Anker, welcher als Ziel die Seite eines einzelnen Artikels hat.
+<1> Die Überschrift umschließen wir dazu mit einem Anker, welcher als Ziel die Seite eines einzelnen Artikels hat.
 Für die URL nutzen wir die Thymeleaf-URL-Syntax.
 Für diese geben wir den Link mit Platzhaltern an (`articles/{article_id}`) und
 legen danach fest, wie diese gefüllt werden sollen (`article_id=${article.id}`)

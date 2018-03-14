@@ -31,11 +31,11 @@ Diese Methode implementieren wir dann entsprechend:
 include::../javasrc/12/src/main/java/tdpe/example/domain/BlogServiceImpl.java[tags=add_comment]
 ----
 
-<1> wir laden den entsprechenden Artikel aus dem Repository
+<1> Wir laden den entsprechenden Artikel aus dem Repository
 
-<2> fügen diesem den Kommentar hinzu
+<2> Fügen diesem den Kommentar hinzu
 
-<3> und speichern ihn dann und geben ihn zurück
+<3> Und speichern ihn dann und geben ihn zurück
 
 === Artikel anpassen
 
@@ -75,7 +75,7 @@ Zuerst müssen wir beim Anzeigen der Kommentare auch dass Command-Object der Vie
 include::../javasrc/12/src/main/java/tdpe/example/web/BlogController.java[tags=single_article]
 ----
 
-<1> wir legen dazu einfach ein neues Command-Object an und legen dieses in das Model
+<1> Wir legen dazu einfach ein neues Command-Object an und legen dieses in das Model
 
 Außerdem legen wir eine neue Methode `addComment` an:
 
@@ -85,14 +85,14 @@ Außerdem legen wir eine neue Methode `addComment` an:
 include::../javasrc/12/src/main/java/tdpe/example/web/BlogController.java[tags=add_comment]
 ----
 
-<1> diese soll nur auf POST-Request an den Unter-Pfad `comments` einen
+<1> Diese soll nur auf POST-Request an den Unter-Pfad `comments` einen
 einzelnen Artikels reagieren,
 
-<2> als Parameter brauchen wir wieder die ID des Artikels und das validierte Command-Object
+<2> Als Parameter brauchen wir wieder die ID des Artikels und das validierte Command-Object
 
-<3> wir prüfen, ob dieses keine fehlerhaften Felder enthält
+<3> Wir prüfen, ob dieses keine fehlerhaften Felder enthält
 
-<4> ist es in Ordnung, fügen wir den Kommentar hinzu, ansonsten machen wir nichts weiter
+<4> Ist es in Ordnung, fügen wir den Kommentar hinzu, ansonsten machen wir nichts weiter
 
 <5> Danach leiten wir wieder auf die normale Artikel-Seite weiter
 
@@ -108,9 +108,9 @@ hinzufügen neuer Kommentare hinzufügen:
 include::../javasrc/12/src/main/resources/templates/article/article.html[]
 ----
 
-<1> wir iterieren über alle Kommentare eines Artikels und lassen jeweils deren Text anzeigen
+<1> Wir iterieren über alle Kommentare eines Artikels und lassen jeweils deren Text anzeigen
 
-<2> die Form hat als `action` das Mapping des Controllers eingetragen.
+<2> Die Form hat als `action` das Mapping des Controllers eingetragen.
 Außerdem referenzieren wir wieder das Command-Object
 
 <3> Die Form enthält dann nur ein einfaches Textfeld zur Eingabe des Kommentars
