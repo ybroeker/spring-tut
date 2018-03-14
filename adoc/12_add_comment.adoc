@@ -64,7 +64,7 @@ include::../javasrc/12/src/main/java/tdpe/example/web/AddCommentCmd.java[]
 === Controller anpassen
 
 Im Controller müssen wir eine kleine Anpassung vornehmen sowie eine Methode zum
-hinzufügen der Kommentare anlegen.
+Hinzufügen der Kommentare anlegen.
 
 Zuerst müssen wir beim Anzeigen der Kommentare auch dass Command-Object der View hinzufügen:
 
