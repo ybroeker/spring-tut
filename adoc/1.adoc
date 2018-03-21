@@ -13,8 +13,7 @@ Für uns reicht es, dass vorbereitete Repo zu klonen:
 
 [source, console]
 ----
-TODO
-git clone https://github.com/ybroeker/spring-example.git
+git clone git clone https://tdpe.techfak.uni-bielefeld.de/git/tdpe-ss-2018.spring_boot_example.git
 ----
 
 
