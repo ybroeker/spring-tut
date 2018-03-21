@@ -11,15 +11,6 @@ Außerdem gibt es den https://start.spring.io/[SPRING INITIALIZR^], mit dem sich
 
 Für uns reicht es, dass vorbereitete Repo zu klonen:
 
-Für Tutoren:
-[source, console]
-----
-git clone https://tdpe.techfak.uni-bielefeld.de/git/tdpe-tut-sommer-2018.exploration.git spring-tut
-cd spring-tut
-git checkout java18
-git checkout -b _techfak_login_
-----
-
 [source, console]
 ----
 TODO
@@ -78,7 +69,7 @@ Führen wir dies aus, sollte der Build korrekt durchlaufen.
 [NOTE]
 ====
 Statt direkt Maven nutzen wir den Maven-Wrapper.
-Diesen ruft man im Project-Verzeichnis unter Linux mit `./mvnw` statt `mvn` auf und unter Windows mit TODO.
+Diesen ruft man im Project-Verzeichnis unter Linux mit `./mvnw` statt `mvn` auf und unter Windows mit `mvnw.cmd`.
 Der Maven-Wrapper kümmert sich um die korrekte Maven-Version und Installation für dieses Projekt.
 ====
 
