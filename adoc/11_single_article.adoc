@@ -121,3 +121,6 @@ legen danach fest, wie diese gefüllt werden sollen (`article_id=${article.id}`)
 Wenn wir starten, sehen wir auf der Hauptseite Links zu den einzelnen Artikeln.
 
 Öffnen wir damit einen, sehen wir den einzelnen Artikel zusammen mit dem Zeitpunkt.
+
+[.thumb]
+image::step11_start.png[neuer Artikel]

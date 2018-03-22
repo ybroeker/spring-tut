@@ -1,0 +1,115 @@
+@startuml
+class Modul {
+Name
+}
+
+class Kategorie {
+Name
+}
+
+class Frage{
+Fragetyp
+Frageninhalt
+Info
+Level
+Anzahl richtiger anzeigen?
+}
+
+class Antwort {
+boolean richtig
+Text
+}
+
+class Fragenkatalog {
+konzeptionelle Klasse?
+}
+
+class Betrieb {
+Name
+}
+class Werk {
+Name
+}
+class Abteilung {
+Name
+}
+
+class Team {
+Name?
+}
+
+class Nutzer {
+Name
+Passwort?
+Mail
+}
+
+class Admin {
+}
+
+class Spieler {
+Avatar?
+Level?
+Erfahrungspunkte?
+Badge?
+Award?
+}
+
+class Spielleiter {
+
+}
+
+class Quiz {
+
+}
+
+class CorporateDesign {
+
+}
+
+class Arbeitsvorrat {
+
+}
+
+class Training {
+}
+class Schulung {
+}
+class  Kampagne {
+}
+class Duell {
+}
+
+Training --|> Quiz
+Schulung --|> Quiz
+Kampagne --|> Quiz
+Duell  --|> Quiz
+
+Training -- "1" Spieler
+Duell -- "2" Spieler
+Schulung -- "1" Spieler
+Kampagne -- Team
+
+Betrieb *-- Werk
+Werk *-- Abteilung
+Abteilung *-- Spieler
+CorporateDesign <-- Betrieb
+
+Frage --* Modul
+Modul --* Kategorie
+Antwort "2..n" --* Frage
+Fragenkatalog o-- Frage : alle?
+
+Quiz "0..*" o--> "1..*" Frage : enthält >
+Quiz "0..*" --> "1?" Modul : gehört zu >
+
+Spieler --|> Nutzer
+Spielleiter --|> Nutzer
+Admin --|> Nutzer
+Spielleiter --> Betrieb : gehört zu?
+
+Spieler --> Arbeitsvorrat
+Arbeitsvorrat o--> Quiz
+
+Team o-- Spieler
+@enduml

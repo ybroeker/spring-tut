@@ -70,4 +70,5 @@ Wir können die Anwendung wieder starten.
 
 Tätigt man nun fehlerhafte Eingaben, erhält man Fehlermeldungen und es wird kein neuer BlogPost erstellt.
 
-
+[.thumb]
+image::step10_error.png[neuer Artikel]

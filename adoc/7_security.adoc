@@ -131,8 +131,23 @@ Wir können die Anwendung wieder mit `./mvnw spring-boot:run` starten.
 
 Die Hauptseite sollte wieder die beiden Artikel zeigen.
 
-Außerdem können wir http://localhost:8080/login[^] aufrufen.
-Verwenden wir falsche Daten, erscheint eine Fehlermeldung, verwenden wir die in die
-Datenbank eingetragenen Daten (`Uncle_Bob`,`password`) erscheint keine.
+Außerdem können wir http://localhost:8080/login[^] aufrufen:
+
+[.thumb]
+image::step7_login.png[Login]
+
+
+Verwenden wir falsche Daten, erscheint eine Fehlermeldung:
+
+[.thumb]
+image::step7_bad_creds.png[Login]
+
+
+Verwenden wir die in dieDatenbank eingetragenen Daten (`Uncle_Bob`,`password`),
+werden wir auf die Hauptseite weitergeleitet.
+
+[.thumb]
+image::step7_loggedin.png[Eingeloggt]
+
 
 Der Login scheint also zu funktionieren - auch wenn er bisher noch keine weitere Funktion hat.

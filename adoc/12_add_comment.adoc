@@ -120,3 +120,6 @@ Außerdem referenzieren wir wieder das Command-Object
 
 Wenn wie die Anwendung starten, und einen einzelnen Artikel (z.B. http://localhost:8080/articles/1)
 anzeigen lassen, können wir diesem Kommentare hinzufügen.
+
+[.thumb]
+image::step12_start.png[neuer Artikel]
