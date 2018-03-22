@@ -74,10 +74,6 @@ include::../javasrc/1/src/main/resources/templates/welcome.html[]
 
 <2> Handelt es sich bei der Variablen nicht um einen String wie bei `time`, wird sie zur Ausgabe mittels ihrer `toString()`-Methode formatiert.
 
-=== Tests
-
-TODO
-
 === Zusammenfassung
 
 * Die Anwendung verwendet generell die Standardeinstellungen die von Spring Boot vorgeschlagen werden
