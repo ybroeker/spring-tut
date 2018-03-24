@@ -3,8 +3,9 @@
 === Grundlage für eigenes Projekt
 
 * In der pom.xml sollten groupId und artifactID des Projektes angepasst werden
-** Dabei bietet sich z.B. `de.unibi.tdpe.ss2017.*team-nr*` als groupId an
-* Die Ober-Packages (`tdpe.example`) sollten passend zu eurer groupId und artifactId angepasst werden
+**die groupId sollte um euren Teamnamen/eure Team-Nummer ergänzt werden
+** name und artifactID sollten jeweils eine sinnoller Name für euer Projekt sein
+* Das Ober-Package (`de.unibi.tdpe.ws2017.example`) sollte passend zu eurer groupId und artifactId angepasst werden
 
 * Die ExampleApplication sollte einen sinnvolleren Namen für euer Programm bekommen
 
@@ -13,6 +14,7 @@
 Beim Build wird eine *.jar und eine *-exec.jar generiert.
 Letztere kann zum direkten Ausführen (mit `java -jar`) der Applikation verwendet werden.
 
+Diese steht auch im Jenkins zum Download bereit.
 
 === Autovervollständigung in templates
 
