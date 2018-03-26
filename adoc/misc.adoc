@@ -12,7 +12,7 @@ Wenn ihr möchtet, könnt ihr für dieses in der pom.xml den Namen und die Besch
 Bei Änderungen an der Anwendung können diese automatisch neu geladen werden,
 ohne das neu gestartet werden muss.
 
-Dazu muss in IntelliJ die entsprechende Option aktiviert sein, damit IntelliJ jede Änderung direkt kompiliert:
+Dazu muss in IntelliJ die entsprechende Option aktiviert sein, damit Änderung direkt kompiliert werden:
 
 Einstellungen -> Build, Execution, Deployment -> Compiler: "Build Project automatically"
 
