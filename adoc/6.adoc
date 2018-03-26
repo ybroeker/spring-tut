@@ -162,7 +162,7 @@ include::../javasrc/6/src/main/resources/data.sql[tags=]
 
 === Starten
 
-Wir können die Anwendung wieder ausführen (`./mnvw spring-boot:run`)
+Wir können die Anwendung wieder ausführen (`./mvnw spring-boot:run`)
 
 [.thumb]
 image::step6_start.png[Blog]
