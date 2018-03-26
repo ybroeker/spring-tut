@@ -6,6 +6,19 @@ In eurem Team-Repo findet ihr bereits ein Initiales Projekt.
 
 Wenn ihr möchtet, könnt ihr für dieses in der pom.xml den Namen und die Beschreibung anpassen.
 
+
+=== Auto-Reload
+
+Bei Änderungen an der Anwendung können diese automatisch neu geladen werden,
+ohne das neu gestartet werden muss.
+
+Dazu muss in IntelliJ die entsprechende Option aktiviert sein, damit IntelliJ jede Änderung direkt kompiliert:
+
+Einstellungen -> Build, Execution, Deployment -> Compiler: "Build Project automatically"
+
+Außerdem muss das Projekt über das Terminal gestartet sein, und nicht direkt über IntelliJ.
+
+
 === Build-Artefakte
 
 Beim Build wird eine *.jar und eine *-exec.jar generiert.
