@@ -2,12 +2,9 @@
 
 === Grundlage für eigenes Projekt
 
-* In der pom.xml sollten groupId und artifactID des Projektes angepasst werden
-**die groupId sollte um euren Teamnamen/eure Team-Nummer ergänzt werden
-** name und artifactID sollten jeweils eine sinnoller Name für euer Projekt sein
-* Das Ober-Package (`de.unibi.tdpe.ws2017.example`) sollte passend zu eurer groupId und artifactId angepasst werden
+In eurem Team-Repo findet ihr bereits ein Initiales Projekt.
 
-* Die ExampleApplication sollte einen sinnvolleren Namen für euer Programm bekommen
+Wenn ihr möchtet, könnt ihr für dieses in der pom.xml den Namen und die Beschreibung anpassen.
 
 === Build-Artefakte
 
