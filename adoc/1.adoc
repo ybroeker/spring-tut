@@ -4,7 +4,7 @@
 :imagesdir: img
 :source-highlighter: highlightjs
 
-Das Erzeugen eins Projekts nehmen wir euch an dieser Stelle ab.
+Das Erzeugen eines Projekts nehmen wir euch an dieser Stelle ab.
 Wer nachlesen möchte, wie man ein einfaches Spring Boot Projekt mit Thymeleaf aufsetzen kann, findet
 https://spring.io/guides/gs/serving-web-content[hier^] weitere Informationen.
 Außerdem gibt es den https://start.spring.io/[SPRING INITIALIZR^], mit dem sich vorkonfigurierte Projekte erstellen lassen.
