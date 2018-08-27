@@ -13,7 +13,7 @@ Für uns reicht es, dass vorbereitete Repo zu klonen:
 
 [source, console]
 ----
-git clone https://github.com/ybroeker/spring-example
+git clone https://github.com/ybroeker/spring-example.git
 ----
 
 
