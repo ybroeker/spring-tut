@@ -18,21 +18,8 @@
 
 |http://www.vinaysahni.com/best-practices-for-a-pragmatic-restful-api[^]
 |Best-Practices für Rest-APIs
-|Bezieht sich zwar hauptsächlich auf REST-APIs,
+|Bezieht sich hauptsächlich auf REST-APIs,
 die meisten Punkt lassen sich aber auch für reine HTML-Seiten umsetzen.
 
-|https://code.google.com/p/guava-libraries/[^]
-|Eine Bibliothek mit diversen Hilfsmethoden z.B. zum komfortableren Umgang mit Collections in Java
-|Mit Java 9 und 10 zT obsolet
-
-|http://www.webjars.org/[^]
-|Übersicht über die via Webjars als Maven-Artefakte verfügbaren Frontend-Bibliotheken
-|
-
-|http://portswigger.net/burp/proxy.html[Burp Proxy^]
-|Tool zum analysieren und verändern von HTTP-Requests.
-|Für einfache Projekte eher selten Wertvoll. Aber wenn, dann unentbehrlich :)
-Die vollversion kostet Geld, aber auch die "eingeschränkte" Fassung ist im Allgemeinen vollkommen
-ausreichend.
 
 |===
