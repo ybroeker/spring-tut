@@ -14,7 +14,7 @@ Folgende Werkzeuge, Frameworks und sonstige Technologien sind dazu eingeplant
 |===
 | |Verwendung |Alternativen
 
-|http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html[Java 8^]
+|https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html[Java 11^]
 |
 |
 
