@@ -14,7 +14,7 @@ Folgende Werkzeuge, Frameworks und sonstige Technologien sind dazu eingeplant
 |===
 | |Verwendung |Alternativen
 
-|https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html[Java 11^]
+|https://adoptopenjdk.net/index.html[Java 11^]
 |
 |
 
