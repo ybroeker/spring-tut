@@ -120,8 +120,9 @@ Auf den Pfad `"/"` sollte in diesem Fall jeder Zugriff haben (`permitAll`)
 <5> hier wird konfiguriert, welcher UserDetailsService und welcher PasswordEncoder genutzt werden.
 Da die Methode mit `Autowired` annotiert ist, sucht Spring entsprechende Objekte (z.B. den mit `Service` annotierten `UserDetailsService`)
 
-<6> als PasswordEncoder stellen wir hier einen `BCryptPasswordEncoder` bereit.
-Da sie Methode mit `Bean` annotiert ist, steht Spring das zurückgegebene Objekt zur Verfügung,
+<6> als PasswordEncoder wird ein Delegating-Password-Encoder verwendet,
+welcher zur Abwärtskombatibilität intern verschiedene Algorithmen nutzen kann, für neue Passwörter wird aber der jeweils beste genutzt (aktuell BCrypt).
+Da die Methode mit `Bean` annotiert ist, steht Spring das zurückgegebene Objekt zur Verfügung,
 wie auch mit `Service` annotierte Klassen
 
 

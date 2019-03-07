@@ -44,7 +44,7 @@ include::../javasrc/9/src/main/java/tdpe/example/domain/UserServiceImpl.java[tag
 
 <3> Und speichern den Nutzer und geben ihn zurück
 
-=== Initializierung der Datenbank
+=== Initialisierung der Datenbank
 
 Die Initialisierung der Datenbank können wir jetzt in eine extra Klasse verschieben,
 und die `data.sql` löschen.
