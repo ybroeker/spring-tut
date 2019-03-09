@@ -51,3 +51,10 @@ jedoch bietet Spring Boot Möglichkeiten, diese zusätzlich zu GET und POST zu n
 
 Gibt man die `form`-Methode in Templates nicht mit `method`, sondern mit
 `th:method` an, wandelt Spring die Methoden in für den Browser passende um, in der  Anwendung lassen sie sich aber als PUT,PATCH & DELETE verwenden.
+
+
+=== Anbieten einer REST-API in Spring
+
+In diesem Tutorial liefern die Methoden im Controller Objekte vom Typ `ModelAndView` zurück, die mithilfe eines Templates als HTML Seite gerendert werden um sie ansehen zu können.
+Ihr könnt aber auch sehr einfach einen Controller erstellen der über JSON-Objekte kommuniziert, indem ihr den entsprechenden Controller mit `@RestController` annotiert.
+Dies kann zum Beispiel hilfreich sein, wenn ihr dynamisch per JavaScript auf Daten eurer Anwendung zugreifen möchtet.
