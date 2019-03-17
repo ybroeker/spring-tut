@@ -15,7 +15,7 @@ Wir müssen also eine Methode zum Speichern der Nutzer hinzufügen:
 [source, java]
 .UserService.java
 ----
-include::../javasrc/9/src/main/java/tdpe/example/domain/UserService.java[tags=class]
+include::../javasrc/9/src/main/java/gpse/example/domain/UserService.java[tags=class]
 ----
 
 <1> Dem Interface fügen wir dazu eine einfache Methode zum erstellen der Nutzer hinzu
@@ -24,7 +24,7 @@ Außerdem braucht der Nutzer noch eine Möglichkeit, diesem Rollen hinzuzufügen
 [source, java]
 .User.java
 ----
-include::../javasrc/9/src/main/java/tdpe/example/domain/User.java[tags=addRole]
+include::../javasrc/9/src/main/java/gpse/example/domain/User.java[tags=addRole]
 ----
 
 <1> Sollte der Nutzer noch keine Rollen haben, erstellen wir diese
@@ -35,7 +35,7 @@ include::../javasrc/9/src/main/java/tdpe/example/domain/User.java[tags=addRole]
 [source, java]
 .UserServiceImpl.java
 ----
-include::../javasrc/9/src/main/java/tdpe/example/domain/UserServiceImpl.java[tags=createUser]
+include::../javasrc/9/src/main/java/gpse/example/domain/UserServiceImpl.java[tags=createUser]
 ----
 
 <1> Wir erstellen den neuen Nutzer mit den übergebenen Daten
@@ -55,7 +55,7 @@ Diese ist eine `InitializingBean`, deren `afterPropertiesSet` beim Start der Anw
 [source, java]
 .InitializeDatabase.java
 ----
-include::../javasrc/9/src/main/java/tdpe/example/InitializeDatabase.java[tags=class]
+include::../javasrc/9/src/main/java/gpse/example/InitializeDatabase.java[tags=class]
 ----
 
 <1> Zuerst versuchen wir, den Nutzer zu laden. Existiert dieser,

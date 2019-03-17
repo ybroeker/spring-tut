@@ -19,7 +19,7 @@ Kommentars hinzu:
 [source,java]
 .BlogService.java
 ----
-include::../javasrc/12/src/main/java/tdpe/example/domain/BlogService.java[tags=add_comment]
+include::../javasrc/12/src/main/java/gpse/example/domain/BlogService.java[tags=add_comment]
 ----
 
 
@@ -28,7 +28,7 @@ Diese Methode implementieren wir dann entsprechend:
 [source,java]
 .BlogServiceImpl.java
 ----
-include::../javasrc/12/src/main/java/tdpe/example/domain/BlogServiceImpl.java[tags=add_comment]
+include::../javasrc/12/src/main/java/gpse/example/domain/BlogServiceImpl.java[tags=add_comment]
 ----
 
 <1> Wir laden den entsprechenden Artikel aus dem Repository
@@ -44,7 +44,7 @@ Damit Kommentare sich so speichern lassen, müssen wir eine kleine Änderung an 
 [source,java]
 .Article.java
 ----
-include::../javasrc/12/src/main/java/tdpe/example/domain/Article.java[tags=comments]
+include::../javasrc/12/src/main/java/gpse/example/domain/Article.java[tags=comments]
 ----
 
 <1> Für die Beziehung geben wir zusätzlich `cascade = CascadeType.ALL` an.
@@ -58,7 +58,7 @@ Als Command-Object legen wir `AddCommentCmd` mit einem einzigen Attribut `text` 
 [source,java]
 .AddCommentCmd.java
 ----
-include::../javasrc/12/src/main/java/tdpe/example/web/AddCommentCmd.java[]
+include::../javasrc/12/src/main/java/gpse/example/web/AddCommentCmd.java[]
 ----
 
 === Controller anpassen
@@ -72,7 +72,7 @@ Zuerst müssen wir beim Anzeigen der Kommentare auch das Command-Object der View
 [source,java]
 .BlogController.java
 ----
-include::../javasrc/12/src/main/java/tdpe/example/web/BlogController.java[tags=single_article]
+include::../javasrc/12/src/main/java/gpse/example/web/BlogController.java[tags=single_article]
 ----
 
 <1> Wir legen dazu einfach ein neues Command-Object an und legen dieses in das Model
@@ -82,7 +82,7 @@ Außerdem legen wir eine neue Methode `addComment` an:
 [source,java]
 .BlogController.java
 ----
-include::../javasrc/12/src/main/java/tdpe/example/web/BlogController.java[tags=add_comment]
+include::../javasrc/12/src/main/java/gpse/example/web/BlogController.java[tags=add_comment]
 ----
 
 <1> Diese soll nur auf POST-Request an den Unter-Pfad `comments` eines

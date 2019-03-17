@@ -9,7 +9,7 @@
 [source,java]
 .ExampleApplication.java
 ----
-include::../javasrc/1/src/main/java/tdpe/example/ExampleApplication.java[tags=class]
+include::../javasrc/1/src/main/java/gpse/example/ExampleApplication.java[tags=class]
 ----
 
 <1> Gibt an, dass dieses Projekt eine Spring-Boot-Application ist.
@@ -23,7 +23,7 @@ include::../javasrc/1/src/main/java/tdpe/example/ExampleApplication.java[tags=cl
 [source,java]
 .WelcomeController.java
 ----
-include::../javasrc/1/src/main/java/tdpe/example/WelcomeController.java[tags=class]
+include::../javasrc/1/src/main/java/gpse/example/WelcomeController.java[tags=class]
 ----
 
 <1> Diese Klasse ist durch die Annotation ein Controller.

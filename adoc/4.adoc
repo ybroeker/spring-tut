@@ -13,7 +13,7 @@ Dieser soll bei Anfragen auf die Hauptseite reagieren und eine Seite mit Artikel
 [source,java]
 .BlogController.java
 ----
-include::../javasrc/3/src/main/java/tdpe/example/web/BlogController.java[tags=class]
+include::../javasrc/3/src/main/java/gpse/example/web/BlogController.java[tags=class]
 ----
 
 <1> Damit die Klasse als Controller erkannt wird, muss sie mit `@Controller` annotiert werden
@@ -56,7 +56,7 @@ Der Unit-Test testet erstmal nur, ob der Controller auch die passende View zurü
 [source, java]
 .BlogControllerTest.java
 ----
-include::../javasrc/3/src/test/java/tdpe/example/web/BlogControllerTest.java[tags=test]
+include::../javasrc/3/src/test/java/gpse/example/web/BlogControllerTest.java[tags=test]
 ----
 <1> Hierbei müssen wir den Namen der View überprüfen, nicht direkt die View
 
@@ -74,7 +74,7 @@ Dies ist nötig, damit bei der Ausführung der Tests zwischen beiden Arten unter
 [source, java]
 .BlogControllerIT.java
 ----
-include::../javasrc/3/src/it/java/tdpe/example/web/BlogControllerIT.java[tags=test]
+include::../javasrc/3/src/it/java/gpse/example/web/BlogControllerIT.java[tags=test]
 ----
 <1> Wir müssen dem Test-Framework bekannt machen, dass dies ein Spring-Integration-Test ist
 <2> Außerdem müssen wir Spring sagen, dass dies ein SpringBootTest ist, damit die Anwendung intern gestartet wird

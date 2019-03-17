@@ -23,7 +23,7 @@ Dieses schreibt u.a. ein Passwort sowie eine Liste von Rollen (z.B. User, Admin)
 [source,java]
 .User.java
 ----
-include::../javasrc/7/src/main/java/tdpe/example/domain/User.java[tags=class]
+include::../javasrc/7/src/main/java/gpse/example/domain/User.java[tags=class]
 ----
 
 <1> Die Klasse muss `UserDetails` implementieren
@@ -74,21 +74,21 @@ Wie bei den Artikeln brauchen wir dazu ein Repository und eine Service.
 [source,java]
 .UserRepository.java
 ----
-include::../javasrc/7/src/main/java/tdpe/example/domain/UserRepository.java[tags=class]
+include::../javasrc/7/src/main/java/gpse/example/domain/UserRepository.java[tags=class]
 ----
 
 
 [source,java]
 .UserService.java
 ----
-include::../javasrc/7/src/main/java/tdpe/example/domain/UserService.java[tags=class]
+include::../javasrc/7/src/main/java/gpse/example/domain/UserService.java[tags=class]
 ----
 <1> UserDetailsService ist ein Interface von Spring, welches vom Framework zum Laden der Nutzer benutzt wird, diese erweitert unseren UserService
 
 [source,java]
 .UserServiceImpl.java
 ----
-include::../javasrc/7/src/main/java/tdpe/example/domain/UserServiceImpl.java[tags=class]
+include::../javasrc/7/src/main/java/gpse/example/domain/UserServiceImpl.java[tags=class]
 ----
 
 <1> In der Implementierung laden wir den User aus der Datenbank, zurück bekommen wir ein `Optional`
@@ -105,7 +105,7 @@ Dazu wird eine `SecurityConfig` angelegt:
 [source,java]
 .SecurityConfig.java
 ----
-include::../javasrc/7/src/main/java/tdpe/example/SecurityConfig.java[tags=class]
+include::../javasrc/7/src/main/java/gpse/example/SecurityConfig.java[tags=class]
 ----
 
 <1> Die Klasse wird als Konfiguration gekennzeichnet und WebSecurity wird aktiviert

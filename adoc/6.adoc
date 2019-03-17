@@ -36,7 +36,7 @@ JPA ist die https://de.wikipedia.org/wiki/Java_Persistence_API[**J**ava **P**ers
 [source,java]
 .Article.java
 ----
-include::../javasrc/6/src/main/java/tdpe/example/domain/Article.java[tags=jpa]
+include::../javasrc/6/src/main/java/gpse/example/domain/Article.java[tags=jpa]
 ----
 <1> Die Klasse ist eine Entität -sie entspricht einer Tabelle in der Datenbank
 
@@ -65,7 +65,7 @@ Getter für die neu hinzukommenden Felder nicht vergessen!
 [source,java]
 .Comment.java
 ----
-include::../javasrc/6/src/main/java/tdpe/example/domain/Comment.java[tags=jpa]
+include::../javasrc/6/src/main/java/gpse/example/domain/Comment.java[tags=jpa]
 ----
 <1> Die Klasse ist wieder eine Entität
 
@@ -81,7 +81,7 @@ include::../javasrc/6/src/main/java/tdpe/example/domain/Comment.java[tags=jpa]
 [source,java]
 .User.java
 ----
-include::../javasrc/6/src/main/java/tdpe/example/domain/User.java[tags=jpa]
+include::../javasrc/6/src/main/java/gpse/example/domain/User.java[tags=jpa]
 ----
 <1> Die Klasse ist wieder eine Entität
 
@@ -104,7 +104,7 @@ Wir können dazu einfach das von Spring bereitgestellte Interface `CrudRepositor
 [source, java]
 .ArticleRepository.java
 ----
-include::../javasrc/6/src/main/java/tdpe/example/domain/ArticleRepository.java[tags=class]
+include::../javasrc/6/src/main/java/gpse/example/domain/ArticleRepository.java[tags=class]
 ----
 
 Repository stellt dabei Methoden zum Erstellen (Create), Lesen (Read), Updaten (Update) und Löschen (Delete) von Datensätzen bereit.
@@ -124,7 +124,7 @@ Damit die Datenbank benutzt werden kann, müssen wir diese noch aktivieren:
 [source, java]
 .ExampleApplication.java
 ----
-include::../javasrc/6/src/main/java/tdpe/example/ExampleApplication.java[tags=class]
+include::../javasrc/6/src/main/java/gpse/example/ExampleApplication.java[tags=class]
 ----
 
 <1> Hiermit wird das Erkennen von Repositorys aktiviert
@@ -141,7 +141,7 @@ Das Repository können wir jetzt in `BlogServiceImpl` nutzen, um die Artikel aus
 [source, java]
 .BlogServiceImpl.java
 ----
-include::../javasrc/6/src/main/java/tdpe/example/domain/BlogServiceImpl.java[tags=class]
+include::../javasrc/6/src/main/java/gpse/example/domain/BlogServiceImpl.java[tags=class]
 ----
 
 <1> Der Konstuktor hat als Argument ein `ArticleRepository` und Spring wird mit `Autowired` angewiesen, ein ensprechendes Objekt zu übergeben

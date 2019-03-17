@@ -17,7 +17,7 @@ Package `javax.validation.constraints` nutzen:
 [source,java]
 .CreateArticleCmd.java
 ----
-include::../javasrc/10/src/main/java/tdpe/example/web/CreateArticleCmd.java[tags=validation]
+include::../javasrc/10/src/main/java/gpse/example/web/CreateArticleCmd.java[tags=validation]
 ----
 
 <1> `NotBlank` gibt dabei z.B. an, dass der String nicht leer sein darf
@@ -31,7 +31,7 @@ und muss auf das Ergebnis dieser entsprechend reagieren:
 [source,java]
 .BlogController.java
 ----
-include::../javasrc/10/src/main/java/tdpe/example/web/BlogController.java[tags=validation]
+include::../javasrc/10/src/main/java/gpse/example/web/BlogController.java[tags=validation]
 ----
 
 <1> Das Command-Object muss mit `@Valid` annotiert werden
