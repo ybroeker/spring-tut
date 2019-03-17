@@ -63,14 +63,14 @@ Die grad entwickelten Klassen können nun implementiert werden. Die Klassen dazu
 [source,java]
 .User.java
 ----
-include::../javasrc/2/src/main/java/tdpe/example/domain/User.java[tags=class]
+include::../javasrc/2/src/main/java/gpse/example/domain/User.java[tags=class]
 }
 ----
 
 [source,java]
 .Article.java
 ----
-include::../javasrc/2/src/main/java/tdpe/example/domain/Article.java[tags=class]
+include::../javasrc/2/src/main/java/gpse/example/domain/Article.java[tags=class]
 }
 ----
 
@@ -82,7 +82,7 @@ Außerdem übergeben wir diese nicht dem Konstruktor - ein neuer Artikel hat noc
 [source,java]
 .Comment.java
 ----
-include::../javasrc/2/src/main/java/tdpe/example/domain/Comment.java[tags=class]
+include::../javasrc/2/src/main/java/gpse/example/domain/Comment.java[tags=class]
 }
 ----
 
@@ -100,7 +100,7 @@ Dafür fügen wir eine weitere Methode hinzu:
 [source,java]
 .Article.java
 ----
-include::../javasrc/2/src/main/java/tdpe/example/domain/Article.java[tags=add-comment]
+include::../javasrc/2/src/main/java/gpse/example/domain/Article.java[tags=add-comment]
 ----
 
 === Testen
@@ -110,13 +110,13 @@ Um unser Domain-Model auszuprobieren, schreiben wir ein paar kurze Unit-Tests:
 [source,java]
 .UserTest.java
 ----
-include::../javasrc/2/src/test/java/tdpe/example/domain/UserTest.java[tags=test]
+include::../javasrc/2/src/test/java/gpse/example/domain/UserTest.java[tags=test]
 ----
 
 [source,java]
 .ArticleTest.java
 ----
-include::../javasrc/2/src/test/java/tdpe/example/domain/ArticleTest.java[tags=test]
+include::../javasrc/2/src/test/java/gpse/example/domain/ArticleTest.java[tags=test]
 ----
 
 Die beiden Test können wir mir `./mvnw clean test` ausfürhren lassen.
