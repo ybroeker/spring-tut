@@ -60,7 +60,7 @@ Artikel "n" --> "1" Nutzer : geschrieben von
 
 [IMPORTANT]
 ====
-Getter sind jeweils der Übersichtlichkeit halber weggelassen, sollten aber zusätzlich generiert werden. Weitere Methoden enthalten die Klassen noch nicht.
+Getter sind jeweils der Übersichtlichkeit halber weggelassen, müssen aber zusätzlich generiert werden. Weitere Methoden enthalten die Klassen noch nicht.
 ====
 
 
