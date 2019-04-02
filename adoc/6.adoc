@@ -32,6 +32,11 @@ müssen diese mit entsprechenden JPA-Annotationen annotiert werden.
 JPA ist die https://de.wikipedia.org/wiki/Java_Persistence_API[**J**ava **P**ersistance **A**pi]
 ====
 
+[IMPORTANT]
+====
+Achtet darauf die Annotationen aus javax.persistence zu importieren und nicht aus anderen Paketen.
+====
+
 
 [source,java]
 .Article.java
