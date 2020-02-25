@@ -7,7 +7,7 @@ pipeline {
                 sh 'asciidoctor -D html -r asciidoctor-diagram adoc/index.adoc'
                 publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: false, reportDir: 'html', reportFiles: 'index.html', reportName: 'Spring-Boot-Tutorial', reportTitles: ''])
 
-                s3Upload consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false, entries: [[bucket: 'spring.ybroeker.de', excludedFile: '**/.asciidoctor/**', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'eu-central-1', showDirectlyInBrowser: false, sourceFile: 'html/**', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'UNSTABLE', profileName: 'spring-boot-tut-publisher', userMetadata: []
+                s3Upload consoleLogLevel: 'INFO', dontWaitForConcurrentBuildCompletion: false, dontSetBuildResultOnFailure: true, entries: [[bucket: 'spring.ybroeker.de', excludedFile: '**/.asciidoctor/**', flatten: false, gzipFiles: false, keepForever: false, managedArtifacts: false, noUploadOnFailure: true, selectedRegion: 'eu-central-1', showDirectlyInBrowser: false, sourceFile: 'html/**', storageClass: 'STANDARD', uploadFromSlave: false, useServerSideEncryption: false]], pluginFailureResultConstraint: 'UNSTABLE', profileName: 'spring-boot-tut-publisher', userMetadata: []
             }
         }
     }
