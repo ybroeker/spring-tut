@@ -84,7 +84,8 @@ Mit `@Autowired` fordern wir ein Objekt dieser Klasse bei Spring an - weiteres d
 <5> Mit der MockMVC-Instanz können wir jetzt Requests ausführen. In diesem Fall ein GET auf `/`, das gleiche, was ein Browser beim Aufrufen der Seite machen würde.
 <6> Wir erwarten, dass der Status (=das Ergebnis in Form eines https://de.wikipedia.org/wiki/HTTP-Statuscode[Codes]) der Anfrage OK ist
 <7> außerdem soll das Ergebnis vom Typ HTML sein
-<8> und die Seite sollte die passende Überschrift enthalten
+<8> die Seite sollte die passende Überschrift enthalten
+<9> und die beiden existierenden Posts sollten zu finden sein
 
 ==== Ausführen der Tests
 
