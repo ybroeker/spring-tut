@@ -4,7 +4,7 @@
 
 In eurem Team-Repo findet ihr bereits ein Initiales Projekt.
 
-Wenn ihr möchtet, könnt ihr für dieses in der pom.xml den Namen und die Beschreibung anpassen.
+Für dieses solltet ihr in der pom.xml den Namen und die Beschreibung anpassen.
 
 
 === Auto-Reload
@@ -16,15 +16,8 @@ Dazu muss in IntelliJ die entsprechende Option aktiviert sein, damit Änderung d
 
 Einstellungen -> Build, Execution, Deployment -> Compiler: "Build Project automatically"
 
-Außerdem muss das Projekt über das Terminal gestartet sein, und nicht direkt über IntelliJ.
+Außerdem muss das Projekt über das Terminal mit Maven gestartet werden, und nicht direkt über IntelliJ.
 
-
-=== Build-Artefakte
-
-Beim Build wird eine *.jar und eine *-exec.jar generiert.
-Letztere kann zum direkten Ausführen (mit `java -jar`) der Applikation verwendet werden.
-
-Diese steht auch im Jenkins zum Download bereit.
 
 === Autovervollständigung in templates
 
@@ -34,13 +27,13 @@ Für die View aus Schritt 4 sieht dies folgendermaßen aus:
 
 [source,html]
 ----
-<!--/*@thymesVar id="blogPosts" type="java.util.List&lt;de.unibielefeld.techfak.tdpe.thymeleaf.domain.BlogPost&gt;"*/-->
+<!--/*@thymesVar id="blogPosts" type="java.util.List<gpse.example.domain.BlogPost>;"*/-->
 <tr th:each="post:${blogPosts}">
     ...
 </tr>
 ----
 IntelliJ IDEA "weiß" damit, das `blogPosts`
-vom Typ `java.util.List<de.unibielefeld.techfak.tdpe.thymeleaf.domain.BlogPost>` ist,
+vom Typ `java.util.List<gpse.example.domain.BlogPost>` ist,
 und kann dann sowohl für die Liste, als auch für Objekte aus der Liste (hier `post`) Autovervollständigung bieten.
 
 
